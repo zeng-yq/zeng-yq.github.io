@@ -7,10 +7,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/boji.png">
+  <link rel="icon" href="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/boji.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="zeng-yq">
@@ -19,13 +21,13 @@
     <meta name="description" content="记录md文件中常用的一些写法，摘录于 Fluid 官方文档。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客写作笔记">
-<meta property="og:url" content="http://zengyq.cn/2022/01/11/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E5%B0%8F%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:url" content="http://zengyq.cn/2022/01/11/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="如此肤浅">
 <meta property="og:description" content="记录md文件中常用的一些写法，摘录于 Fluid 官方文档。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220111104313.png">
 <meta property="article:published_time" content="2022-01-11T09:02:43.427Z">
-<meta property="article:modified_time" content="2022-01-11T08:22:15.873Z">
+<meta property="article:modified_time" content="2022-01-11T11:12:23.102Z">
 <meta property="article:author" content="zeng-yq">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220111104313.png">
@@ -43,7 +45,7 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/atom-one-dark.min.css" />
     
   
 
@@ -242,7 +244,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.2k 字
+      2.5k 字
     </span>
   
 
@@ -251,7 +253,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      18 分钟
+      21 分钟
     </span>
   
 
@@ -284,18 +286,20 @@
             
             <div class="markdown-body">
               <h1 id="front-matter">Front-matter</h1>
+<p>常用配置项如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">这是标题</span><br><span class="hljs-attr">excerpt:</span> <span class="hljs-string">这是摘要</span><br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-attr">hide:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">sticky:</span> <span class="hljs-number">100</span><br><span class="hljs-meta">---</span><br></code></pre></div></td></tr></table></figure>
 <h2 id="摘要">摘要</h2>
 <p>默认开启了自动摘要，若要手动指定摘要，使用 <code>&lt;!-- more --&gt;</code> MD文档里划分，如：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><pre><code class="hljs markdown">正文的一部分作为摘要<br>&lt;!-- more --&gt;<br>余下的正文<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">正文的一部分作为摘要<br>&lt;!-- more --&gt;<br>余下的正文<br></code></pre></div></td></tr></table></figure>
 <p>或者在 <code>Front-matter</code> 里设置 <code>excerpt</code> 字段，如：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">这是标题</span><br><span class="hljs-attr">excerpt:</span> <span class="hljs-string">这是摘要</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">这是标题</span><br><span class="hljs-attr">excerpt:</span> <span class="hljs-string">这是摘要</span><br><span class="hljs-meta">---</span><br></code></pre></div></td></tr></table></figure>
 <blockquote>
 <p><strong>TIP</strong></p>
 <p>无论哪种摘要都最多显示3行！</p>
 </blockquote>
 <h2 id="隐藏文章">隐藏文章</h2>
 <p>如果想把某些文章隐藏起来，不在首页和其他分类里展示，可以在文章开头 <code>Front-matter</code> 中配置 <code>hide: true</code> 属性。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-attr">hide:</span> <span class="hljs-literal">true</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是文章内容</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-attr">hide:</span> <span class="hljs-literal">true</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是文章内容</span><br></code></pre></div></td></tr></table></figure>
 <blockquote>
 <p><strong>TIP</strong></p>
 <p>隐藏会使文章在分类和标签类里都不显示</p>
@@ -303,34 +307,41 @@
 </blockquote>
 <h2 id="文章排序置顶">文章排序（置顶）</h2>
 <p>如果想手动将某些文章固定在首页靠前的位置，可以在安装 <code>hexo-generator-index</code> &gt;= 2.0.0 版本的情况下，在文章开头 <code>Front-matter</code> 中配置 <code>sticky</code> 属性：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-attr">sticky:</span> <span class="hljs-number">100</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是文章内容</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-attr">sticky:</span> <span class="hljs-number">100</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是文章内容</span><br></code></pre></div></td></tr></table></figure>
 <p><code>sticky</code> 数值越大，该文章越靠前，达到类似于置顶的效果，其他未设置的文章依然按默认排序。</p>
 <p>当文章设置了 <code>sticky</code> 后，主题会默认在首页文章标题前增加一个图标，来标识这是一个置顶文章，你可以通过<strong>主题配置</strong>去关闭或修改这个功能：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">index:</span><br>  <span class="hljs-attr">post_sticky:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">icon:</span> <span class="hljs-string">&#x27;iconfont icon-top&#x27;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">index:</span><br>  <span class="hljs-attr">post_sticky:</span><br>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">icon:</span> <span class="hljs-string">&#x27;iconfont icon-top&#x27;</span><br></code></pre></div></td></tr></table></figure>
 <h2 id="latex数学公式">LaTeX数学公式</h2>
 <p>为了提高不包含公式页面的加载速度，因此，在需要使用 <code>LaTeX</code> 语法的数学公式时，在文章 Front-matter 里指定 <code>mermaid: true</code> 。</p>
+<h2 id="文章分类">文章分类</h2>
+<p>下面的指定方法：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">categories:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Diary</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Life</span><br></code></pre></div></td></tr></table></figure>
+<p>会使分类<code>Life</code>成为<code>Diary</code>的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。</p>
+<p>如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">categories:</span><br><span class="hljs-bullet">-</span> [<span class="hljs-string">Diary</span>, <span class="hljs-string">PlayStation</span>]<br><span class="hljs-bullet">-</span> [<span class="hljs-string">Diary</span>, <span class="hljs-string">Games</span>]<br><span class="hljs-bullet">-</span> [<span class="hljs-string">Life</span>]<br></code></pre></div></td></tr></table></figure>
+<p>此时这篇文章同时包括三个分类： <code>PlayStation</code> 和 <code>Games</code> 分别都是父分类 <code>Diary</code> 的子分类，同时 <code>Life</code> 是一个没有子分类的分类。</p>
 <h1 id="文章">文章</h1>
 <h2 id="首页封面图">首页封面图</h2>
 <p>对于单篇文章，在文章开头 <code>Front-matter</code> 中配置 <code>index_img</code> 属性。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">Hexo</span>, <span class="hljs-string">Fluid</span>]<br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是文章内容</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">Hexo</span>, <span class="hljs-string">Fluid</span>]<br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是文章内容</span><br></code></pre></div></td></tr></table></figure>
 <h2 id="顶部大图">顶部大图</h2>
 <p>默认显示<strong>主题配置</strong>中的 <code>post.banner_img</code>，如需要设置单个文章的 Banner，在 <code>Front-matter</code> 中指定 <code>banner_img</code> 属性。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">Hexo</span>, <span class="hljs-string">Fluid</span>]<br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">banner_img:</span> <span class="hljs-string">/img/post_banner.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是文章内容</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">Hexo</span>, <span class="hljs-string">Fluid</span>]<br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">banner_img:</span> <span class="hljs-string">/img/post_banner.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是文章内容</span><br></code></pre></div></td></tr></table></figure>
 <h2 id="评论">评论</h2>
 <p>如果想在某个文章页关闭评论，或者想在某个自定义页面开启评论，可以通过在 <code>Front-matter</code> 设置 <code>comment: bool</code> 来控制评论开关，或者通过 <code>comment: 'type'</code> 来开启指定的评论插件。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">关于页</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">about</span><br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-attr">comment:</span> <span class="hljs-string">&#x27;valine&#x27;</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是正文内容</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">关于页</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">about</span><br><span class="hljs-attr">index_img:</span> <span class="hljs-string">/img/example.jpg</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2019-10-10 10:00:00</span><br><span class="hljs-attr">comment:</span> <span class="hljs-string">&#x27;valine&#x27;</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">以下是正文内容</span><br></code></pre></div></td></tr></table></figure>
 <h2 id="脚注">脚注</h2>
 <p>脚注语法如下：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">这是一句话<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="这是一句话！！！
-">[1]</span></a></sup><br>[<span class="hljs-symbol">^1</span>]: <span class="hljs-link">这是对应的脚注</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">这是一句话<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="这是一句话！！！
+">[1]</span></a></sup><br>[<span class="hljs-symbol">^1</span>]: <span class="hljs-link">这是对应的脚注</span><br></code></pre></div></td></tr></table></figure>
 <p>更优雅的使用方式，是将脚注写在文末，比如：（效果在本文最后）</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">正文<br><br><span class="hljs-section">## 参考</span><br>[<span class="hljs-symbol">^1</span>]: <span class="hljs-link">参考资料1</span><br>[<span class="hljs-symbol">^2</span>]: <span class="hljs-link">参考资料2</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">正文<br><br><span class="hljs-section">## 参考</span><br>[<span class="hljs-symbol">^1</span>]: <span class="hljs-link">参考资料1</span><br>[<span class="hljs-symbol">^2</span>]: <span class="hljs-link">参考资料2</span><br></code></pre></div></td></tr></table></figure>
 <h2 id="tag插件">Tag插件</h2>
 <h3 id="便签">便签</h3>
 <p>在 markdown 中加入如下的代码来使用便签：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% note success %&#125;<br>文字 或者 <span class="hljs-code">`markdown`</span> 均可<br>&#123;% endnote %&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">&#123;% note success %&#125;<br>文字 或者 <span class="hljs-code">`markdown`</span> 均可<br>&#123;% endnote %&#125;<br></code></pre></div></td></tr></table></figure>
 <p>或者使用 HTML 形式：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-primary&quot;</span>&gt;</span>标签<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;note note-primary&quot;</span>&gt;</span>标签<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br></code></pre></div></td></tr></table></figure>
 <p>可选便签：</p>
 <p class="note note-primary">
 primary
@@ -359,16 +370,16 @@ light
 </blockquote>
 <h3 id="行内标签">行内标签</h3>
 <p>在 markdown 中加入如下的代码来使用 Label：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% label primary @text %&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">&#123;% label primary @text %&#125;<br></code></pre></div></td></tr></table></figure>
 <p>或者使用 HTML 形式：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label label-primary&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label label-primary&quot;</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></div></td></tr></table></figure>
 <p>可选 Label：</p>
 <p><span class="label label-primary">primary</span> <span class="label label-default">default</span> <span class="label label-info">info</span> <span class="label label-success">success</span> <span class="label label-danger">danger</span></p>
 <h3 id="按钮">按钮</h3>
 <p>你可以在 markdown 中加入如下的代码来使用 Button：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% btn url, text, title %&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">&#123;% btn url, text, title %&#125;<br></code></pre></div></td></tr></table></figure>
 <p>或者使用 HTML 形式：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>text<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>text<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br></code></pre></div></td></tr></table></figure>
 <p>url：跳转链接 text：显示的文字 title：鼠标悬停时显示的文字（可选）</p>
 <p><a class="btn" href="#" title="title">text</a></p>
 <h2 id="参考脚注效果">参考（脚注效果）</h2>

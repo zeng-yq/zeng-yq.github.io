@@ -7,10 +7,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/boji.png">
+  <link rel="icon" href="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/boji.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="zeng-yq">
@@ -23,8 +25,9 @@
 <meta property="og:site_name" content="如此肤浅">
 <meta property="og:description" content="题目：318.排序数组中两个数字之和 剑指 Offer II 006. 排序数组中两个数字之和 与主站167题相似 难度：简单 给定一个已按照 升序排列 的整数数组 numbers ，请你从数组中找出两个数满足相加之和等于目标数 target 。 函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。numbers 的下标 从 0 开始计数 ，所以答案数组应当满足 $0 &lt;&#x3D;">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
 <meta property="article:published_time" content="2021-12-10T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-11T11:06:09.720Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="力扣">
 <meta property="article:tag" content="算法">
@@ -32,6 +35,7 @@
 <meta property="article:tag" content="简单">
 <meta property="article:tag" content="数组">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
   
   
   <title>力扣刷题日记2021/12/11 - 如此肤浅</title>
@@ -46,7 +50,7 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/atom-one-dark.min.css" />
     
   
 
@@ -294,11 +298,11 @@
 <p>假设数组中存在且只存在一对符合条件的数字，同时一个数字不能使用两次。</p>
 <span id="more"></span>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight nix"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><pre><code class="hljs nix">输入：<span class="hljs-attr">numbers</span> = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">10</span>], <span class="hljs-attr">target</span> = <span class="hljs-number">8</span><br>输出：[<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>解释：<span class="hljs-number">2</span> 与 <span class="hljs-number">6</span> 之和等于目标数 <span class="hljs-number">8</span> 。因此 <span class="hljs-attr">index1</span> = <span class="hljs-number">1</span>, <span class="hljs-attr">index2</span> = <span class="hljs-number">3</span> 。<br></code></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nix">输入：<span class="hljs-attr">numbers</span> = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">10</span>], <span class="hljs-attr">target</span> = <span class="hljs-number">8</span><br>输出：[<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>解释：<span class="hljs-number">2</span> 与 <span class="hljs-number">6</span> 之和等于目标数 <span class="hljs-number">8</span> 。因此 <span class="hljs-attr">index1</span> = <span class="hljs-number">1</span>, <span class="hljs-attr">index2</span> = <span class="hljs-number">3</span> 。<br></code></pre></div></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：numbers = <span class="hljs-comment">[2,3,4]</span>, target = 6<br>输出：<span class="hljs-comment">[0,2]</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight inform7"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs inform7">输入：numbers = <span class="hljs-comment">[2,3,4]</span>, target = 6<br>输出：<span class="hljs-comment">[0,2]</span><br></code></pre></div></td></tr></table></figure>
 <p><strong>示例3：</strong></p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：numbers = <span class="hljs-comment">[-1,0]</span>, target = -1<br>输出：<span class="hljs-comment">[0,1]</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight inform7"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs inform7">输入：numbers = <span class="hljs-comment">[-1,0]</span>, target = -1<br>输出：<span class="hljs-comment">[0,1]</span><br></code></pre></div></td></tr></table></figure>
 <p><strong>提示：</strong></p>
 <ul>
 <li><span class="math inline">\(2&lt;=numbers.length&lt;=3*10^4\)</span></li>
@@ -314,7 +318,7 @@
 <p>目前为止做过最简单题......</p>
 </blockquote>
 <h1 id="代码">代码</h1>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-keyword">int</span>&gt;&amp; numbers, <span class="hljs-keyword">int</span> target)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> first = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> second = numbers.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>        vector&lt;<span class="hljs-keyword">int</span>&gt; ret;<br>        <span class="hljs-keyword">while</span> (first &lt; second) &#123;<br>            <span class="hljs-keyword">if</span> (numbers[first] + numbers[second] &gt; target) &#123;<br>                second--;<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(numbers[first] + numbers[second] &lt; target) &#123;<br>                first++;<br>            &#125;<br>            <span class="hljs-keyword">else</span> &#123;<br>                ret.<span class="hljs-built_in">push_back</span>(first);<br>                ret.<span class="hljs-built_in">push_back</span>(second);<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-keyword">int</span>&gt;&amp; numbers, <span class="hljs-keyword">int</span> target)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> first = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> second = numbers.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>        vector&lt;<span class="hljs-keyword">int</span>&gt; ret;<br>        <span class="hljs-keyword">while</span> (first &lt; second) &#123;<br>            <span class="hljs-keyword">if</span> (numbers[first] + numbers[second] &gt; target) &#123;<br>                second--;<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(numbers[first] + numbers[second] &lt; target) &#123;<br>                first++;<br>            &#125;<br>            <span class="hljs-keyword">else</span> &#123;<br>                ret.<span class="hljs-built_in">push_back</span>(first);<br>                ret.<span class="hljs-built_in">push_back</span>(second);<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br>&#125;;<br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
