@@ -18,21 +18,19 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目：318.单词长度的最大乘积 剑指 Offer II 005. 单词长度的最大乘积 与主站318题相同 难度：中等 给定一个字符串数组 words，请计算当两个字符串 words[i] 和 words[j] 不包含相同字符时，它们长度的乘积的最大值。假设字符串中只包含英语的小写字母。如果没有不包含相同字符的一对字符串，返回 0。">
+    <meta name="description" content="题目：318.单词长度的最大乘积 剑指 Offer II 005. 单词长度的最大乘积 与主站318题相同 难度：中等">
 <meta property="og:type" content="article">
 <meta property="og:title" content="力扣刷题日记2021&#x2F;12&#x2F;9">
 <meta property="og:url" content="http://zengyq.cn/2021/12/09/%E5%89%91%E6%8C%87%20Offer%20II%20005%20%E5%8D%95%E8%AF%8D%E9%95%BF%E5%BA%A6%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="题目：318.单词长度的最大乘积 剑指 Offer II 005. 单词长度的最大乘积 与主站318题相同 难度：中等 给定一个字符串数组 words，请计算当两个字符串 words[i] 和 words[j] 不包含相同字符时，它们长度的乘积的最大值。假设字符串中只包含英语的小写字母。如果没有不包含相同字符的一对字符串，返回 0。">
+<meta property="og:description" content="题目：318.单词长度的最大乘积 剑指 Offer II 005. 单词长度的最大乘积 与主站318题相同 难度：中等">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
 <meta property="article:published_time" content="2021-12-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-11T11:06:54.309Z">
+<meta property="article:modified_time" content="2022-01-13T09:50:48.961Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="力扣">
-<meta property="article:tag" content="算法">
 <meta property="article:tag" content="整数">
-<meta property="article:tag" content="C++">
 <meta property="article:tag" content="位运算">
 <meta property="article:tag" content="中等">
 <meta property="article:tag" content="哈希表">
@@ -121,25 +119,33 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="iconfont icon-books"></i>
-                笔记
+                <i class="iconfont icon-cliplist"></i>
+                目录
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
                   
                   
                   
-                  <a class="dropdown-item" href="/note_cpp/">
-                    
-                    C++
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
                   </a>
                 
                   
                   
                   
-                  <a class="dropdown-item" href="/note_linux/">
-                    
-                    linux
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
                   </a>
                 
               </div>
@@ -151,33 +157,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
+              <a class="nav-link" href="/taking/">
+                <i class="iconfont icon-kakao-talk-fill"></i>
+                自言自语
               </a>
             </li>
           
@@ -295,8 +277,8 @@
               <h1 id="题目318.单词长度的最大乘积">题目：318.单词长度的最大乘积</h1>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/aseY1I/">剑指 Offer II 005. 单词长度的最大乘积</a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-product-of-word-lengths/">与主站318题相同</a></p>
 <p><strong>难度：</strong><label style="color:orange">中等</label></p>
-<p>给定一个字符串数组 words，请计算当两个字符串 words[i] 和 words[j] 不包含相同字符时，它们长度的乘积的最大值。假设字符串中只包含英语的小写字母。如果没有不包含相同字符的一对字符串，返回 0。</p>
 <span id="more"></span>
+<p>给定一个字符串数组 words，请计算当两个字符串 words[i] 和 words[j] 不包含相同字符时，它们长度的乘积的最大值。假设字符串中只包含英语的小写字母。如果没有不包含相同字符的一对字符串，返回 0。</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight applescript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs applescript">输入: <span class="hljs-built_in">words</span> = [<span class="hljs-string">&quot;abcw&quot;</span>,<span class="hljs-string">&quot;baz&quot;</span>,<span class="hljs-string">&quot;foo&quot;</span>,<span class="hljs-string">&quot;bar&quot;</span>,<span class="hljs-string">&quot;fxyz&quot;</span>,<span class="hljs-string">&quot;abcdef&quot;</span>]<br>输出: <span class="hljs-number">16</span> <br>解释: 这两个单词为 <span class="hljs-string">&quot;abcw&quot;</span>, <span class="hljs-string">&quot;fxyz&quot;</span>。它们不包含相同字符，且长度的乘积最大。<br></code></pre></div></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
@@ -309,7 +291,9 @@
 <li><span class="math inline">\(1&lt;=words[i].length&lt;=1000\)</span></li>
 <li><span class="math inline">\(words[i]\)</span>仅包含小写字母</li>
 </ul>
-<p>来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/aseY1I 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：https://leetcode-cn.com/problems/aseY1I</p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 <h1 id="解题思路">解题思路</h1>
 <blockquote>
 <p><strong>方法一：</strong>（最笨的方法，且会超时）</p>
@@ -349,6 +333,8 @@
                     
                       <a class="hover-with-bg" href="/categories/%E5%8A%9B%E6%89%A3/">力扣</a>
                     
+                      <a class="hover-with-bg" href="/categories/%E5%8A%9B%E6%89%A3/%E5%89%91%E6%8C%87offer%EF%BC%88%E4%B8%93%E9%A1%B9%E7%AA%81%E7%A0%B4%E7%89%88%EF%BC%89/">剑指offer（专项突破版）</a>
+                    
                   </div>
                 
                 
@@ -357,11 +343,7 @@
                     
                       <a class="hover-with-bg" href="/tags/%E5%8A%9B%E6%89%A3/">力扣</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-                    
                       <a class="hover-with-bg" href="/tags/%E6%95%B4%E6%95%B0/">整数</a>
-                    
-                      <a class="hover-with-bg" href="/tags/C/">C++</a>
                     
                       <a class="hover-with-bg" href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
                     

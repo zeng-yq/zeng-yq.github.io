@@ -18,24 +18,21 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目：338.前 n 个数字二进制中 1 的个数 剑指 Offer II 003. 前 n 个数字二进制中 1 的个数 与主站338题相同 难度：简单 给定一个非负整数 n ，请计算 0 到 n 之间的每个数字的二进制表示中 1 的个数，并输出一个数组。">
+    <meta name="description" content="题目：338.前 n 个数字二进制中 1 的个数 剑指 Offer II 003. 前 n 个数字二进制中 1 的个数 与主站338题相同 难度：简单">
 <meta property="og:type" content="article">
 <meta property="og:title" content="力扣刷题日记2021&#x2F;12&#x2F;7">
 <meta property="og:url" content="http://zengyq.cn/2021/12/07/%E5%89%91%E6%8C%87%20Offer%20II%20003%20%E5%89%8D%20n%20%E4%B8%AA%E6%95%B0%E5%AD%97%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD%201%20%E7%9A%84%E4%B8%AA%E6%95%B0/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="题目：338.前 n 个数字二进制中 1 的个数 剑指 Offer II 003. 前 n 个数字二进制中 1 的个数 与主站338题相同 难度：简单 给定一个非负整数 n ，请计算 0 到 n 之间的每个数字的二进制表示中 1 的个数，并输出一个数组。">
+<meta property="og:description" content="题目：338.前 n 个数字二进制中 1 的个数 剑指 Offer II 003. 前 n 个数字二进制中 1 的个数 与主站338题相同 难度：简单">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
 <meta property="article:published_time" content="2021-12-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-11T11:07:10.524Z">
+<meta property="article:modified_time" content="2022-01-13T09:50:58.399Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="力扣">
-<meta property="article:tag" content="算法">
 <meta property="article:tag" content="整数">
-<meta property="article:tag" content="C++">
 <meta property="article:tag" content="简单">
 <meta property="article:tag" content="位运算">
-<meta property="article:tag" content="需要重做">
 <meta property="article:tag" content="动态规划">
 <meta property="article:tag" content="布莱恩·柯林汉算法">
 <meta name="twitter:card" content="summary_large_image">
@@ -123,25 +120,33 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="iconfont icon-books"></i>
-                笔记
+                <i class="iconfont icon-cliplist"></i>
+                目录
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 
                   
                   
                   
-                  <a class="dropdown-item" href="/note_cpp/">
-                    
-                    C++
+                  <a class="dropdown-item" href="/archives/">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
                   </a>
                 
                   
                   
                   
-                  <a class="dropdown-item" href="/note_linux/">
-                    
-                    linux
+                  <a class="dropdown-item" href="/categories/">
+                    <i class="iconfont icon-category-fill"></i>
+                    分类
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/tags/">
+                    <i class="iconfont icon-tags-fill"></i>
+                    标签
                   </a>
                 
               </div>
@@ -153,33 +158,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
+              <a class="nav-link" href="/taking/">
+                <i class="iconfont icon-kakao-talk-fill"></i>
+                自言自语
               </a>
             </li>
           
@@ -297,8 +278,8 @@
               <h1 id="题目338.前-n-个数字二进制中-1-的个数">题目：338.前 n 个数字二进制中 1 的个数</h1>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/w3tCBm/">剑指 Offer II 003. 前 n 个数字二进制中 1 的个数</a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/counting-bits/">与主站338题相同</a></p>
 <p><strong>难度：</strong><label style="color:green">简单</label></p>
-<p>给定一个非负整数 n ，请计算 0 到 n 之间的每个数字的二进制表示中 1 的个数，并输出一个数组。</p>
 <span id="more"></span>
+<p>给定一个非负整数 n ，请计算 0 到 n 之间的每个数字的二进制表示中 1 的个数，并输出一个数组。</p>
 <p><strong>示例 1:</strong></p>
 <figure class="highlight ada"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ada">输入: n = <span class="hljs-number">2</span><br>输出: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>解释: <br><span class="hljs-number">0</span> <span class="hljs-comment">--&gt; 0</span><br><span class="hljs-number">1</span> <span class="hljs-comment">--&gt; 1</span><br><span class="hljs-number">2</span> <span class="hljs-comment">--&gt; 10</span><br></code></pre></div></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
@@ -311,7 +292,9 @@
 <ul>
 <li>给出时间复杂度为 <span class="math inline">\(O(n*sizeof(integer))\)</span> 的解答非常容易。但你可以在线性时间 <span class="math inline">\(O(n)\)</span> 内用一趟扫描做到吗？</li>
 </ul>
-<p>来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/w3tCBm 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>来源：力扣（LeetCode）</p>
+<p>链接：https://leetcode-cn.com/problems/w3tCBm</p>
+<p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 <h1 id="解题思路">解题思路</h1>
 <blockquote>
 <p><strong>方法一：</strong></p>
@@ -350,6 +333,8 @@
                     
                       <a class="hover-with-bg" href="/categories/%E5%8A%9B%E6%89%A3/">力扣</a>
                     
+                      <a class="hover-with-bg" href="/categories/%E5%8A%9B%E6%89%A3/%E5%89%91%E6%8C%87offer%EF%BC%88%E4%B8%93%E9%A1%B9%E7%AA%81%E7%A0%B4%E7%89%88%EF%BC%89/">剑指offer（专项突破版）</a>
+                    
                   </div>
                 
                 
@@ -358,17 +343,11 @@
                     
                       <a class="hover-with-bg" href="/tags/%E5%8A%9B%E6%89%A3/">力扣</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
-                    
                       <a class="hover-with-bg" href="/tags/%E6%95%B4%E6%95%B0/">整数</a>
-                    
-                      <a class="hover-with-bg" href="/tags/C/">C++</a>
                     
                       <a class="hover-with-bg" href="/tags/%E7%AE%80%E5%8D%95/">简单</a>
                     
                       <a class="hover-with-bg" href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E9%9C%80%E8%A6%81%E9%87%8D%E5%81%9A/">需要重做</a>
                     
                       <a class="hover-with-bg" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
                     
@@ -389,9 +368,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/12/07/%E5%89%91%E6%8C%87%20Offer%20II%20002%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95/">
+                      <a href="/2021/12/08/%E5%89%91%E6%8C%87%20Offer%20II%20004%20%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">力扣刷题日记2021/12/7</span>
+                        <span class="hidden-mobile">力扣刷题日记2021/12/8</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -399,8 +378,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/12/06/%E5%89%91%E6%8C%87%20Offer%20II%20001%20%E6%95%B4%E6%95%B0%E9%99%A4%E6%B3%95/">
-                        <span class="hidden-mobile">力扣刷题日记2021/12/6</span>
+                      <a href="/2021/12/07/%E5%89%91%E6%8C%87%20Offer%20II%20002%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95/">
+                        <span class="hidden-mobile">力扣刷题日记2021/12/7</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
