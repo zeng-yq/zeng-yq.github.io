@@ -333,11 +333,83 @@
   </main>
 
   <footer class="text-center mt-5 py-3">
+  
   <div class="footer-content">
      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
   </div>
   
+  
+  
   <div class="statistics">
+  <!-- 统计网站运行时间 -->
+    
+
+    <span id="showrunDate">
+      本站已运行 
+      <span id="dnum" style="display: none"></span>  
+      
+         天 
+      
+      <span id="hnum" style="display: none"></span>
+      
+         小时 
+      
+      <span id="mnum" style="display: none"></span>
+      
+         分 
+       
+      <span id="snum" style="display: none"></span>
+      
+         秒
+      
+    </span>
+   </div>
+    
+    <script type="text/javascript" defer=true>
+      var now = new Date();
+      length = 5;
+      function update() {
+        var grt = new Date('01/01/2022 00:00:00');
+        now.setTime(now.getTime() + 250);
+        var days = (now - grt) / 1000 / 60 / 60 / 24;
+        if (length >= 2){
+          var dnum = Math.floor(days);
+          document.getElementById("dnum").innerHTML = dnum;
+          document.getElementById("dnum").style.display = "inline";
+        }
+        if (length >= 3){
+          hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+          hnum = Math.floor(hours);
+          if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+          }
+          document.getElementById("hnum").innerHTML = hnum;
+          document.getElementById("hnum").style.display = "inline";
+        }
+        if (length >= 4){
+          minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+          mnum = Math.floor(minutes);
+          if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+          }
+          document.getElementById("mnum").innerHTML = mnum;
+          document.getElementById("mnum").style.display = "inline";
+        }
+        if (length >= 5){
+          seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+          snum = Math.round(seconds);
+          if (String(snum).length == 1) {
+            snum = "0" + snum;
+          }
+          document.getElementById("snum").innerHTML = snum;
+          document.getElementById("snum").style.display = "inline";
+        }
+      }
+      setInterval("update()", 250);
+    </script>
+	
+	
+	<div class="statistics">
     
     
 
@@ -359,9 +431,11 @@
           </span>
       
     
+	
   </div>
 
 
+  
   
   <!-- 备案信息 -->
   <div class="beian">
@@ -382,7 +456,10 @@
 
 
   
+  
 </footer>
+
+
 
 
   <!-- SCRIPTS -->
@@ -481,6 +558,7 @@
 <script src="/js/diy/xiantiao.js"></script>
 <script src="/js/diy/jingtaisidai.js"></script>
 <script src="/js/diy/xiaoxingxing.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxuehua.js"></script>
 
 
 
