@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220114140830.png">
 <meta property="article:published_time" content="2022-01-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-14T09:26:38.310Z">
+<meta property="article:modified_time" content="2022-01-16T13:58:36.559Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -77,7 +77,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"zengyq.cn","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"bb2c8c85e6445862aff762b6b3f0564b","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"zengyq.cn","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"bb2c8c85e6445862aff762b6b3f0564b","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"athceUsMhoqEdJ8uuOhOx3Uq-9Nh9j0Va","app_key":"0ohfGqLbAMwzw4FimdgAcDHB","server_url":"https://athceusm.lc-cn-e1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -235,7 +235,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.1k 字
+      2.5k 字
     </span>
   
 
@@ -244,7 +244,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      18 分钟
+      21 分钟
     </span>
   
 
@@ -415,7 +415,29 @@
 <p>同时修改文件所属用户和用户组</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114172218624.png" srcset="/img/loading.gif" lazyload /></p></li>
 </ul>
-<h1 id="p7-find命令1">P7-find命令1</h1>
+<h1 id="p7-find命令">P7-find命令</h1>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">find 文件目录 -查询方式 该方式下的查询条件<br></code></pre></div></td></tr></table></figure>
+<ul>
+<li><p>-type 按文件类型搜索</p>
+<p>d/p/s/c/b/c 可查找6种文件类型（见P3）</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220116210753321.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>-name 按文件名查找</p>
+<p>会发现子文件夹里面也会查找</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220116212939114.png" srcset="/img/loading.gif" lazyload /></p>
+<p>若想只查找到某个层级，则需要参数 -maxdepth</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220116213205521.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>-size 按文件大小搜索</p>
+<p>单位 k、M、G（注意大小写）</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 如：搜索大于20M小于50M的文件</span><br>find ./ -size +20M -size -50M<br></code></pre></div></td></tr></table></figure></li>
+<li><p>按时间查询</p>
+<p>-atime、-mtime、-ctime 天</p>
+<p>-amin、-mmin、-cmin 分钟</p>
+<figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">a		（Access）表示最近访问时间<br><br>m	    （Modify）表示最近更改时间，指更改文件属性一类的（权限、链接数）<br><br>c		（Change）表示最近更改时间，指更改文件内容<br></code></pre></div></td></tr></table></figure></li>
+</ul>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220116214819941.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220116215746081.png" srcset="/img/loading.gif" lazyload /></p>
+<h1 id="p8-午后回顾">P8-午后回顾</h1>
+<h1 id="p9-find命令2">P9-find命令2</h1>
 
             </div>
             <hr>
@@ -465,6 +487,15 @@
               
             </div>
 
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+
+              </article>
             
           </article>
         </div>
@@ -704,6 +735,8 @@
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
+  <script defer src="/js/leancloud.js" ></script>
+
 
 
   <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
@@ -806,7 +839,6 @@
   
 <script src="/js/diy/caidai.js"></script>
 <script src="/js/diy/xiantiao.js"></script>
-<script src="/js/diy/jingtaisidai.js"></script>
 <script src="/js/diy/xiaoxingxing.js"></script>
 <script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxuehua.js"></script>
 
