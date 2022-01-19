@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220114140830.png">
 <meta property="article:published_time" content="2022-01-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-16T13:58:36.559Z">
+<meta property="article:modified_time" content="2022-01-19T08:56:03.686Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -77,7 +77,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"zengyq.cn","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"bb2c8c85e6445862aff762b6b3f0564b","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"athceUsMhoqEdJ8uuOhOx3Uq-9Nh9j0Va","app_key":"0ohfGqLbAMwzw4FimdgAcDHB","server_url":"https://athceusm.lc-cn-e1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"zengyq.cn","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"bb2c8c85e6445862aff762b6b3f0564b","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"athceUsMhoqEdJ8uuOhOx3Uq-9Nh9j0Va","app_key":"0ohfGqLbAMwzw4FimdgAcDHB","server_url":"https://athceusm.lc-cn-e1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -235,7 +235,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.5k 字
+      5.5k 字
     </span>
   
 
@@ -244,7 +244,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      21 分钟
+      46 分钟
     </span>
   
 
@@ -276,7 +276,7 @@
             <h1 style="display: none">Linux系统编程</h1>
             
             <div class="markdown-body">
-              <h1 id="p1-linux命令基础习惯-linux系统编程">P1-Linux命令基础习惯-Linux系统编程</h1>
+              <h1 id="linux命令基础习惯-linux系统编程">Linux命令基础习惯-Linux系统编程</h1>
 <ul>
 <li><p>查看系统时间</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114105658210.png" srcset="/img/loading.gif" lazyload /></p></li>
@@ -292,7 +292,7 @@
 <p>Ctrl-k 删除光标到行末</p>
 <p>clear 清空终端屏幕</p></li>
 </ul>
-<h1 id="p2-类unix系统目录">P2-类Unix系统目录</h1>
+<h1 id="类unix系统目录">类Unix系统目录</h1>
 <ul>
 <li><p>查询当前所在目录</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114111358784.png" srcset="/img/loading.gif" lazyload /></p></li>
@@ -301,13 +301,13 @@
 <p>​ bin 存放二进制可执行文件</p>
 <p>​ boot 存放开机启动程序</p>
 <p>​ dev 存放设备文件（鼠标、键盘等）（Linux中”所见皆文件“）</p>
-<p>​ home 存放用户</p>
+<p>​ home 存放普通用户</p>
 <p>​ etc 存放用户相关的配置信息</p>
 <p>​ lib 存放操作系统使用到的库</p>
 <p>​ root 管理员主目录</p>
 <p>​ usr 存放用户安装的第三方的库、文件等资源（如安装QQ）（unix software resource）</p></li>
 </ul>
-<h1 id="p3-目录和文件操作1">P3-目录和文件操作1</h1>
+<h1 id="目录和文件操作">目录和文件操作</h1>
 <ul>
 <li><p>Linux系统文件类型：</p>
 <p>​ 普通文件：-</p>
@@ -347,7 +347,6 @@
 <p>​ cp -a dir1 dir2 把 dir1 中内容全部拷贝到 dir2 中</p>
 <p>​ cp -r dir1 dir2 递归地把 dir1 中内容全部拷贝到 dir2 中</p>
 <p>​ (-a 和 -r 的区别：-a 是把文件及文件的属性（权限、改动时间等）也全部拷贝过去)</p>
-<h1 id="p4-目录和文件操作2">P4-目录和文件操作2</h1>
 <p>​ cat filename 查看文件 filename 的内容</p>
 <p>​ tac filename 逆序查看文件 filename 的内容<img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114125353935.png" srcset="/img/loading.gif" lazyload /></p>
 <p>​ more filename 分页显示（空格翻页，适用于查看大文件，按q退出）</p>
@@ -356,7 +355,7 @@
 <p>​</p>
 <p>​ tree 命令，查看当前目录结构树（需要先安装 tree）</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114135706183.png" srcset="/img/loading.gif" lazyload /></p>
-<h1 id="p5-软链接和硬链接">P5-软链接和硬链接</h1>
+<h1 id="软链接和硬链接">软链接和硬链接</h1>
 <ul>
 <li><p>软链接</p>
 <p>ln -s file1 file2 为文件 file1 创建软链接 file2</p>
@@ -377,7 +376,7 @@
 <p>操作系统给每一个文件赋予唯一的 Inode，当又相同的 Inode 的文件时，彼此同步。删除的时候只将硬链接计数减一，减为 0 时，Inode 被释放。</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114162539400.png" srcset="/img/loading.gif" lazyload /></p></li>
 </ul>
-<h1 id="p6-创建修改用户和用户组">P6-创建修改用户和用户组</h1>
+<h1 id="创建修改用户和用户组">创建修改用户和用户组</h1>
 <ul>
 <li><p>查询当前登录用户</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114163333016.png" srcset="/img/loading.gif" lazyload /></p></li>
@@ -415,7 +414,7 @@
 <p>同时修改文件所属用户和用户组</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114172218624.png" srcset="/img/loading.gif" lazyload /></p></li>
 </ul>
-<h1 id="p7-find命令">P7-find命令</h1>
+<h1 id="find-命令找文件">find 命令（找文件）</h1>
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">find 文件目录 -查询方式 该方式下的查询条件<br></code></pre></div></td></tr></table></figure>
 <ul>
 <li><p>-type 按文件类型搜索</p>
@@ -436,8 +435,263 @@
 </ul>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220116214819941.png" srcset="/img/loading.gif" lazyload /></p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220116215746081.png" srcset="/img/loading.gif" lazyload /></p>
-<h1 id="p8-午后回顾">P8-午后回顾</h1>
-<h1 id="p9-find命令2">P9-find命令2</h1>
+<ul>
+<li><p>-exec 将查找的结果集执行某一指定命令</p>
+<p>大括号 '{}' 就代表前面 find 查询出来的集合</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220118180711635.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>-ok 是 -exec的衍生版，以交互的方式将 find 查询出来的集合执行某一指定命令</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220118181255550.png" srcset="/img/loading.gif" lazyload /></p></li>
+</ul>
+<h1 id="grep命令找文件内容">grep命令（找文件内容）</h1>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">grep -r <span class="hljs-string">&#x27;stdio&#x27;</span> ./ -n<br></code></pre></div></td></tr></table></figure>
+<p>​ -r ：递归，若有子目录则会在子目录中递归查找</p>
+<p>​ -n ：显示行号</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220118182029947.png" srcset="/img/loading.gif" lazyload /></p>
+<p>若想之间修改第 n 行的内容，可以在 vim 命令结尾加上 +n，快速定位到第 n 行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">vim stdio.h +6<br></code></pre></div></td></tr></table></figure>
+<h1 id="进程管理相关命令">进程管理相关命令</h1>
+<p>（目前只记录了ps，后续会补充）</p>
+<ul>
+<li>ps 命令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 查看当前与用户进行交互的进程</span><br>ps<br><span class="hljs-comment"># 查看所有没有没有控制终端(不需要与用户交互)的进程</span><br>ps aux<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 将 ps aux 的结果结果集通过管道&quot;|&quot;交给 grep 命令，查找与 python 有关的进程</span><br><span class="hljs-comment"># （python 最后用括号括起来）</span><br>ps aux | grep python<br></code></pre></div></td></tr></table></figure>
+<p>​ 注意，使用 grep 命令搜索进程时，若只有一条，说明当前系统中没有检索的相关进程。如下图，最后一条是代表 grep 命令本身这个进程。</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220118183335522.png" srcset="/img/loading.gif" lazyload /></p>
+<h1 id="软件包安装卸载">软件包安装、卸载</h1>
+<p>​ linux 安装软件的特点：只需要联网、知道软件名字即可，无需关心安装位置、需要的包等信息。</p>
+<p>​ 注：一般来说著名的linux系统基本上分两大类</p>
+<p>​ ① RedHat 系列：RedHat、CentOS、Fedora 等</p>
+<p>​ 包管理工具是 yum</p>
+<p>​ ② Debian 系列：Debian、Ubuntu 等</p>
+<p>​ 包管理工具是 apt-get</p>
+<ul>
+<li><p>yum 安装</p>
+<p>​ 自动解决依赖关系；可以对rpm进行分组，基于组进行安装操作；引入仓库概念，支持多个仓库；配置简单</p>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo yum install softname<br></code></pre></div></td></tr></table></figure>
+<ul>
+<li>卸载</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 查询软件列表</span><br>rpm -qa | grep softname<br><br><span class="hljs-comment"># 卸载软件</span><br>sudo yum remove softname<br></code></pre></div></td></tr></table></figure></li>
+<li><p>rpm安装（离线方式）</p>
+<p>​ RPM 是 RedHat Package Manager 的缩写，由 RedHat 推出的软件包管理管理工具，在 Fedora、Redhat、CentOS、Mandriva、SuSE、YellowDog 等主流发行版本，以及在这些版本基础上二次开发出来的发行版采用。</p>
+<p>​ RPM包里面包含可执行的二进制程序，自身所带的附加文件，版本文件（软件包的依赖关系）。</p>
+<p>​ 安装软件包虽然方便，但是需要手工解决软件包的依赖关系。很多时候安装一个软件包需要安装多个其他软件包，还有不同版本的兼容性问题，很复杂。</p></li>
+</ul>
+<h1 id="压缩解压命令">压缩、解压命令</h1>
+<p>linux 特有的压缩方式。</p>
+<ul>
+<li><p>压缩</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">tar zcvf 要生成的压缩包名 压缩材料<br></code></pre></div></td></tr></table></figure>
+<ol type="1">
+<li><p>压缩包一般使用 .tar.gz 结尾</p></li>
+<li><p>zcvf的含义：</p>
+<p>z：zip，压缩</p>
+<p>c：create，创建</p>
+<p>v：vision，显示压缩过程，可以去掉，直接用 zcf，但这样不显示压缩过程</p>
+<p>f：file，文件</p></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 两种方式</span><br>tar zcvf test.tar.gz file1 dir2	<span class="hljs-comment"># 使用 gzip 方式压缩</span><br>tar jcvf test.tar.gz file1 dir2	<span class="hljs-comment"># 使用 bzip2 方式压缩</span><br></code></pre></div></td></tr></table></figure>
+<figure>
+<img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220118193541640.png" srcset="/img/loading.gif" lazyload alt="image-20220118193541640" /><figcaption aria-hidden="true">image-20220118193541640</figcaption>
+</figure></li>
+<li><p>解压</p>
+<p>将压缩命令中的 c 替换成 x</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">tar zxvf 压缩包名<br><br><span class="hljs-comment">#对应上面的两种方式</span><br>tar zxvf test.tar.gz	<span class="hljs-comment"># 使用 gzip 方式解压</span><br>tar jxvf test.tar.gz	<span class="hljs-comment"># 使用 bzip2 方式解压</span><br></code></pre></div></td></tr></table></figure></li>
+</ul>
+<h1 id="vim">vim</h1>
+<h2 id="三种工作模式">三种工作模式</h2>
+<ul>
+<li>命令模式</li>
+<li>文本模式</li>
+<li>末行模式</li>
+</ul>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119094922125.png" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="基本操作">基本操作</h2>
+<h3 id="跳转">跳转</h3>
+<p><strong><em>命令模式下进入编辑模式</em></strong></p>
+<blockquote>
+<p>i：光标前进行插入</p>
+<p>I：行首进行插入</p>
+<p>a：光标后进行插入</p>
+<p>A：行末进行插入</p>
+<p>o：向下新开一行，插入行首</p>
+<p>O：向上新开一行，插入行首</p>
+</blockquote>
+<p><strong><em>命令模式下的光标移动</em></strong></p>
+<blockquote>
+<p>h：左移</p>
+<p>j：下移</p>
+<p>k：上移</p>
+<p>l：右移</p>
+</blockquote>
+<blockquote>
+<p>gg：跳转到首行</p>
+<p>G：跳转到末行</p>
+<p>$：光标移到行末</p>
+<p>0：光标移到行首</p>
+</blockquote>
+<p><strong><em>跳转到指定行</em></strong></p>
+<blockquote>
+<p>末行模式下：</p>
+<p>:行号 + 回车</p>
+<p>命令模式下：（如：3G跳转到第 3 行）</p>
+<p>行号G</p>
+</blockquote>
+<p><strong><em>自动格式化代码</em></strong></p>
+<blockquote>
+<p>gg=G（命令模式）</p>
+</blockquote>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119102557618.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119102627391.png" srcset="/img/loading.gif" lazyload /></p>
+<p><strong><em>括号跳转</em></strong></p>
+<p>光标处于左大括号时，使用 % 跳转到对应右大括号，再按 % 跳回去。</p>
+<blockquote>
+<p>%（命令模式）</p>
+</blockquote>
+<h3 id="删除">删除</h3>
+<p>命令模式下进行操作</p>
+<blockquote>
+<p>x：删除单个字符</p>
+<p>r：替换光标所在字符</p>
+<p>dw：删除一个单词（光标需放在单词首字母处）</p>
+<p>D：（shift + d）（d$）删除光标所在位置到行末</p>
+<p>d0：删除光标所在位置到行首</p>
+<p>dd：删除所在行</p>
+<p>ndd：删除从光标开始的 n 行（如：3dd，删除从光标开始的下面3行）</p>
+<p><strong>删除指定区域：</strong>v 进入“可视模式”，使用 hjkl 移动光标选中待操作区域，再按 d 删除。</p>
+</blockquote>
+<h3 id="复制粘贴">复制粘贴</h3>
+<blockquote>
+<p>yy：复制光标所在行</p>
+<p>nyy：复制光标所在位置的 n 行</p>
+<p>p（小写）：向光标前进行粘贴</p>
+<p>P（大写）：向光标后进行粘贴</p>
+</blockquote>
+<p class="note note-primary">
+注意：上一节里的 dd，不是删除，而是剪切，消失的内容去了剪切板，而不是删掉了 p 和 P 粘贴会出现换行，主要原因是复制整行时，会把行末的换行符也复制下来。<b>所以，可以结合上一节的删除，进行指定区域的复制粘贴操作。</b>
+</p>
+<h3 id="替换查找">替换查找</h3>
+<ul>
+<li><p>查找</p>
+<ol type="1">
+<li><p>查找设想内容</p>
+<p>命令模式下，按 “/”，输入想要搜索的关键字，回车。按 n 检索下一个。</p></li>
+<li><p>查找看到的内容</p>
+<p>命令模式下，将光标置于单词任意一个字符上，按 "*" 或 "#" 查找该单词。</p></li>
+</ol></li>
+<li><p>替换</p>
+<ol type="1">
+<li><p>单行替换</p>
+<p>末行模式下，光标置于待替换行，</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">:s /待替换词/替换<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119112459396.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>全文替换</p>
+<p>末行模式下，</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 这样只会替换每一行第一次出现的那个词</span><br>:%s /待替换词/替换词<br><span class="hljs-comment"># 若要替换所有的</span><br>:%s /待替换词/替换词/g<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119112931372.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119113559135.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119113333831.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>区域替换</p>
+<p>末行模式下，</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">:起始行号,终止行号s /待替换词/替换词/g<br></code></pre></div></td></tr></table></figure></li>
+</ol></li>
+</ul>
+<h3 id="其他命令">其他命令</h3>
+<ul>
+<li><p>末行模式下的历史命令</p>
+<p>上一条命令： <code>Ctrl + p</code></p>
+<p>下一条命令： <code>Ctrl + n</code></p></li>
+<li><p>撤销、反撤销</p>
+<p>撤销： <code>u</code></p>
+<p>反撤销： <code>Ctrl + r</code></p></li>
+<li><p>行号</p>
+<p>末行模式下，</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 显示行号</span><br>:<span class="hljs-built_in">set</span> nu<br><span class="hljs-comment"># 隐藏行号</span><br>:<span class="hljs-built_in">set</span> nonu<br></code></pre></div></td></tr></table></figure>
+<p>每次打开 vim 的时候自动设置行号，需要设置配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 1.执行命令</span><br>vi ~/.vimrc<br><span class="hljs-comment"># 2.输入如下配置</span><br>:<span class="hljs-built_in">set</span> nu<br><span class="hljs-comment"># 3.保存退出</span><br>:wq<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119115427540.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>分屏</p>
+<ol type="1">
+<li><p>横向分屏</p>
+<p>末行模式下，输入 <code>:sp</code>，再按回车，在分屏直接进行切换需要按 <code>Ctrl + w + w</code>；用 <code>:q</code> 退出所在窗口，也可用 <code>:qall</code> 退出所有窗口。</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119152823903.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>垂直分屏</p>
+<p>末行模式下，输入 <code>:vsp</code>，再按回车即可。</p></li>
+</ol>
+<blockquote>
+<p>注意：</p>
+</blockquote>
+<p><code>Ctrl + Shift + t</code> 是复制一个窗口，并没有达到分屏的效果</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119152339114.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>查看宏定义</p>
+<p>命令模式下，光标放在待查看词上，<code>[+d</code> 即可查看。</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119154542615.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>在末行模式下执行 SHELL 命令</p>
+<blockquote>
+<p>:!命令</p>
+</blockquote>
+<p>如下：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119154931348.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119154945476.png" srcset="/img/loading.gif" lazyload /></p></li>
+</ul>
+<h2 id="vim打造ide">vim打造IDE</h2>
+<p>vimrc 是 vim 的配置文件，可以修改两个位置。</p>
+<blockquote>
+<p>/etc/vim/vimrc</p>
+<p>~/.vimrc （优先级更高）</p>
+</blockquote>
+<p>内容后续使用时不断补充......</p>
+<h1 id="gcc编译">gcc编译</h1>
+<h2 id="安装">安装</h2>
+<p>新安装的 Linux(centos7) 系统没有 C 语言环境。</p>
+<ol type="1">
+<li><p>使用 yum 进行安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo yum -y install gcc gcc-c++ kernel-devel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>验证安装完成：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gcc -v<br></code></pre></div></td></tr></table></figure>
+<figure>
+<img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119160808215.png" srcset="/img/loading.gif" lazyload alt="image-20220119160808215" /><figcaption aria-hidden="true">image-20220119160808215</figcaption>
+</figure></li>
+</ol>
+<h2 id="编译的4个步骤">编译的4个步骤</h2>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119161436387.png" srcset="/img/loading.gif" lazyload /></p>
+<ol type="1">
+<li>预处理</li>
+<li>编译</li>
+<li>汇编</li>
+<li>链接</li>
+</ol>
+<p>例：</p>
+<p>​ 可以看到，编译过后的 .s 文件是汇编语言（下面命令的 -o 是指定生成文件的名字）</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119161735291.png" srcset="/img/loading.gif" lazyload /></p>
+<p>​ hello.s 的内容如下：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119161714635.png" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="gcc常用参数">gcc常用参数</h2>
+<ul>
+<li>-I 指定头文件位置</li>
+</ul>
+<p>现在 hello.c 需要用到头文件 hello.h ，且在同一个文件夹内，编译时能成功。</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119163241889.png" srcset="/img/loading.gif" lazyload /></p>
+<figure>
+<img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119163527244.png" srcset="/img/loading.gif" lazyload alt="image-20220119163527244" /><figcaption aria-hidden="true">image-20220119163527244</figcaption>
+</figure>
+<p>若 hello.c 和 hello.h 不在同一个文件夹内，则需要在执行命令时加参数 I 指定头文件所在位置，参数 I 可以放置命令中间，也可以放在命令后面。</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gcc -I 头文件所在位置 hello.c -o hello<br><br><span class="hljs-comment"># 例如：</span><br>gcc -I ./inc hello.c -o hello<br><span class="hljs-comment"># 或</span><br>gcc hello.c -o hello -I ./inc<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220119164108740.png" srcset="/img/loading.gif" lazyload /></p>
+<ul>
+<li><p>其他参数</p>
+<p>-I 指定头文件所在目录位置</p>
+<p>-c 只做预处理，编译，汇编。得到二进制文件</p>
+<p>-g 编译时添加调试语句，用于 gdb 调试</p>
+<p>-Wall 显示所有警告信息</p>
+<p>-D 向程序中“动态”注册宏定义</p>
+<p>-l 指定动态库库名</p>
+<p>-L 指定动态库路径</p></li>
+</ul>
 
             </div>
             <hr>
