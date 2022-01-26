@@ -18,16 +18,16 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="目录对应b站每个视频，便于复习！">
+    <meta name="description" content="b站视频学习笔记！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux系统编程">
 <meta property="og:url" content="http://zengyq.cn/2022/01/14/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="目录对应b站每个视频，便于复习！">
+<meta property="og:description" content="b站视频学习笔记！">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220114140830.png">
 <meta property="article:published_time" content="2022-01-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-19T08:56:03.686Z">
+<meta property="article:modified_time" content="2022-01-24T09:34:33.369Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5.5k 字
+      6.7k 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      46 分钟
+      56 分钟
     </span>
   
 
@@ -288,7 +288,8 @@
             <h1 style="display: none">Linux系统编程</h1>
             
             <div class="markdown-body">
-              <h1 id="linux命令基础习惯-linux系统编程">Linux命令基础习惯-Linux系统编程</h1>
+              <p>本文顺序对应视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KE411q7ee?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click">黑马程序员-Linux系统编程_哔哩哔哩_bilibili</a></p>
+<h1 id="linux命令基础习惯-linux系统编程">Linux命令基础习惯-Linux系统编程</h1>
 <ul>
 <li><p>查看系统时间</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114105658210.png" srcset="/img/loading.gif" lazyload /></p></li>
@@ -704,6 +705,72 @@
 <p>-l 指定动态库库名</p>
 <p>-L 指定动态库路径</p></li>
 </ul>
+<h1 id="静态库与动态库">静态库与动态库</h1>
+<p>​ 静态库在文件中静态展开，所以有多少文件就展开多少次，非常吃内存，100M 展开 100 次，就是 1G， 但是这样的好处就是静态加载的速度快。</p>
+<p>​ 使用动态库会将动态库加载到内存，10 个文件也只需要加载一次，然后这些文件用到库的时候临时去加载，速度慢一些，但是很省内存 。</p>
+<p>​ 动态库和静态库各有优劣，根据实际情况合理选用即可。</p>
+<h2 id="静态库的制作及使用">静态库的制作及使用</h2>
+<p>​ 步骤一：写好源码</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124104132836.png" srcset="/img/loading.gif" lazyload /></p>
+<p>步骤二：编译源码，生成 .o 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gcc -c test.c -o test.o<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124104445513.png" srcset="/img/loading.gif" lazyload /></p>
+<p>步骤三：制作静态库</p>
+<p>静态库名字以 <code>lib</code> 开头，以 <code>.a</code> 结尾，如：<code>libmylib.a</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 以 file1.o、file2.o 为目标文件，生成静态库libmylib.a</span><br>ar rcs libmylib.a file1.o file2.o<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124104624674.png" srcset="/img/loading.gif" lazyload /></p>
+<p>步骤四：使用静态库</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 注意：源码文件名在前，库在后</span><br>gcc test.c lib库名.a -o a.out<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124110143858.png" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="用头文件加载静态库">用头文件加载静态库</h2>
+<p class="note note-danger">
+注意：<code>test.c</code> 的内容如下，在使用 <code>add</code> <code>sub</code> <code>div</code> 这些函数前既没有声明，也没有定义，编译器对于没有声明的函数，自动使用隐式声明。但编译器只能隐士声明返回值为 <code>int</code> 的函数形式：<code>int add(int, int);</code>
+</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124111251470.png" srcset="/img/loading.gif" lazyload /></p>
+<p>在编译时加上参数 <code>-Wall</code> 即可显示编译时的警告信息：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124111722591.png" srcset="/img/loading.gif" lazyload /></p>
+<p>在 <code>test.c</code> 前加上函数声明：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124111941835.png" srcset="/img/loading.gif" lazyload /></p>
+<p>再次编译则不会出错：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124112012458.png" srcset="/img/loading.gif" lazyload /></p>
+<p>上面这个方法，需要库的使用者知道库里的函数，但是一个一个地加到代码里，不太可行。</p>
+<p><strong><lable style="color:red">因此使用头文件的方法来加载静态库更科学：</lable></strong></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124161354472.png" srcset="/img/loading.gif" lazyload /></p>
+<p>这样也不会报错，且更科学</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124161856574.png" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="动态库的制作">动态库的制作</h2>
+<p>步骤一：写好源码</p>
+<p>步骤二：编译源码，<lable style="color:orange">生成与位置无关的 <code>.o</code> 文件（<code>-fPIC</code>）</lable></p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gcc -c test.c -o test.o -fPIC<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124170003012.png" srcset="/img/loading.gif" lazyload /></p>
+<p>步骤三：制作动态库</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gcc -shared -o lib库名.so file1.o file2.o<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124170216014.png" srcset="/img/loading.gif" lazyload /></p>
+<p>步骤四：编译可执行程序时，指定所使用的动态库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gcc test.c -o a.out -lmymath -L./lib<br>-l	<span class="hljs-comment"># 指定库名</span><br>-L	<span class="hljs-comment"># 指定库路径</span><br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124171006343.png" srcset="/img/loading.gif" lazyload /></p>
+<p><strong><lable style="color:red">此时执行文件会出错：</lable></strong></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220124171229967.png" srcset="/img/loading.gif" lazyload /></p>
+<p><strong>解决方法：</strong></p>
+<ol type="1">
+<li><p>通过环境变量： <code>export LD_LIBRARY_PATH=动态库路径</code></p>
+<p><code>./a.out</code> 成功！！！ （临时生效， 终端重启环境变量失效）</p></li>
+<li><p>永久生效： 写入 终端配置文件。 <code>.bashrc</code> 建议使用绝对路径</p>
+<ol type="1">
+<li><p><code>vi ~/.bashrc</code></p></li>
+<li><p>写入 <code>export LD_LIBRARY_PATH=动态库路径</code> 保存</p></li>
+<li><p><code>. .bashrc/ source .bashrc /</code>重启 终端 ---&gt; 让修改后的 <code>.bashrc</code> 生效</p></li>
+<li><p><code>./a.out</code> 成功！！</p></li>
+</ol></li>
+<li><p>拷贝自定义动态库 到 <code>/lib</code> (标准 C 库所在目录位置)</p></li>
+<li><p>配置文件法</p>
+<ol type="1">
+<li><p><code>sudo vi /etc/ld.so.conf</code></p></li>
+<li><p>写入 动态库绝对路径 保存</p></li>
+<li><p><code>sudo ldconfig -v</code> 使配置文件生效。</p></li>
+<li><p><code>./a.out</code> 成功！！！--- 使用 <code>ldd a.out</code> 查看</p></li>
+</ol></li>
+</ol>
 
             </div>
             <hr>
