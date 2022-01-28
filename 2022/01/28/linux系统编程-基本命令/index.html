@@ -18,23 +18,23 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="b站视频学习笔记！寒假正在龟速学习中，持续更新......">
+    <meta name="description" content="b站视频学习笔记！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux系统编程">
-<meta property="og:url" content="http://zengyq.cn/2022/01/26/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/index.html">
+<meta property="og:title" content="Linux基本命令">
+<meta property="og:url" content="http://zengyq.cn/2022/01/28/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="b站视频学习笔记！寒假正在龟速学习中，持续更新......">
+<meta property="og:description" content="b站视频学习笔记！">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220114140830.png">
-<meta property="article:published_time" content="2022-01-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-26T03:04:07.003Z">
+<meta property="article:published_time" content="2022-01-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-28T08:48:09.110Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220114140830.png">
   
   
-  <title>Linux系统编程 - 如此肤浅</title>
+  <title>Linux基本命令 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Linux系统编程">
+            <span class="h2" id="subtitle" title="Linux基本命令">
               
             </span>
 
@@ -236,8 +236,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-01-26 00:00" pubdate>
-        2022年1月26日 凌晨
+      <time datetime="2022-01-28 00:00" pubdate>
+        2022年1月28日 凌晨
       </time>
     </span>
   
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7.2k 字
+      8.7k 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      61 分钟
+      73 分钟
     </span>
   
 
@@ -285,11 +285,11 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Linux系统编程</h1>
+            <h1 style="display: none">Linux基本命令</h1>
             
             <div class="markdown-body">
               <p>本文顺序对应视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KE411q7ee?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click">黑马程序员-Linux系统编程_哔哩哔哩_bilibili</a></p>
-<h1 id="linux命令基础习惯-linux系统编程">Linux命令基础习惯-Linux系统编程</h1>
+<h1 id="linux命令基础习惯">Linux命令基础习惯</h1>
 <ul>
 <li><p>查看系统时间</p>
 <p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220114105658210.png" srcset="/img/loading.gif" lazyload /></p></li>
@@ -594,7 +594,7 @@
 <li><p>查找设想内容</p>
 <p>命令模式下，按 “/”，输入想要搜索的关键字，回车。按 n 检索下一个。</p></li>
 <li><p>查找看到的内容</p>
-<p>命令模式下，将光标置于单词任意一个字符上，按 "*" 或 "#" 查找该单词。</p></li>
+<p>命令模式下，将光标置于单词任意一个字符上，按 "*" 或 "#" 查找该单词。若要取消查找时的高亮显示，需在末行模式下输入 <code>:noh</code></p></li>
 </ol></li>
 <li><p>替换</p>
 <ol type="1">
@@ -815,8 +815,100 @@
 <p>​ Makefile文件告诉Make源代码文件之间的链接关系、依赖关系等从而准确编译和链接成一个应用程序。</p>
 <h2 id="个规则">1个规则</h2>
 <figure class="highlight markdown"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs markdown">目标:依赖条件<br>   &#x27;一个tab缩进&#x27; 命令<br></code></pre></div></td></tr></table></figure>
-<h2 id="个函数">2个函数</h2>
-<h2 id="个自动变量">3个自动变量</h2>
+<ul>
+<li><p><strong>例1：单个文件编译</strong></p>
+<p>先创建 <code>makefile</code> 文件，将编译命令写到文件中，执行 <code>make</code> 命令</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127210032006.png" srcset="/img/loading.gif" lazyload /></p>
+<p><code>makefile</code> 文件中内容如下：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127210246371.png" srcset="/img/loading.gif" lazyload /></p>
+<p>将编译命令拆开写：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127212720633.png" srcset="/img/loading.gif" lazyload /></p></li>
+</ul>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127212758219.png" srcset="/img/loading.gif" lazyload /></p>
+<ul>
+<li><p><strong>例2：多个文件编译</strong></p>
+<p>采用一条命令的 <code>makefile</code> 进行编译：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127215400196.png" srcset="/img/loading.gif" lazyload /></p>
+<p>假设此时只修改了 add.c 中的内容，重新进行编译的时候其他几个文件也重新编译了，这不太科学。 明明只改了一个，全部都重新编译了。</p>
+<p>于是将 <code>makefile</code> 改写如下：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127222454364.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127222438949.png" srcset="/img/loading.gif" lazyload /></p>
+<p>此时，修改文件 <code>add.c</code> 的内容，再次进行 <code>make</code>：</p>
+<figure>
+<img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127222814428.png" srcset="/img/loading.gif" lazyload alt="image-20220127222814428" /><figcaption aria-hidden="true">image-20220127222814428</figcaption>
+</figure>
+<p>发现只有 <code>add.c</code> 进行重新编译了，其他文件没有重新编译，因此提高了编译速度。</p>
+<blockquote>
+<p><strong><code>makefile</code> 检测原理：</strong></p>
+<p>修改文件后，文件的修改时间发生变化，会出现目标文件的时间早于作为依赖材料的时间，出现这种情况的文件会重新编译。修改 <code>add.c</code> 后，<code>add.o</code> 的时间就早于 <code>add.c</code> ，<code>a.out</code> 的时间也早于 <code>add.o</code> 的时间了，于是重新编译这俩文件了。</p>
+</blockquote></li>
+<li><p><strong>注意：</strong></p></li>
+</ul>
+<p><code>makefile</code> 默认第一个目标文件为终极目标，生成就跑路：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127225943091.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127230038292.png" srcset="/img/loading.gif" lazyload /></p>
+<p>这时候可以用 ALL 来指定终极目标：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127230200341.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220127230248645.png" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="个函数和clean">2个函数和clean</h2>
+<ul>
+<li><p>2个函数</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 找到当前目录下所有后缀为.c 的文件，将文件名组成列表，赋值给 src</span><br>src = $(wildcard ./*.c)<br><br><span class="hljs-comment"># 把 src 变量里所有后缀为.c 的文件替换成.o</span><br>obj = $(patsubset %.c, %.o, $(src))<br></code></pre></div></td></tr></table></figure>
+<p>用这两个函数修改 <code>makefile</code> 如下：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128151053390.png" srcset="/img/loading.gif" lazyload /></p>
+<p>执行 <code>make</code> 指令，如下所示：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128151205071.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>clean函数</p>
+<p>由于每次重新编译前都需要删除 .o文件 和 a.out 文件，于是在 <code>makefile</code> 中加入 <code>clean</code> 函数：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128151754696.png" srcset="/img/loading.gif" lazyload /></p>
+<p>rm 前面的-，代表出错依然执行。比如，待删除文件集合是 5 个，已经手动删除了 1 个，就只剩下 4 个，然而删除命令里面还是 5 个的集合，就会有删除不存在文件的问题，不加这-，就会报错，告诉 你有一个文件找不到。加了-就不会因为这个报错。</p>
+<p>执行 <code>clean</code> 指令时，先执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 加 -n 是为了看模拟执行 clean 指令后会删除哪些文件，以防删错</span><br><span class="hljs-comment"># 若不小心删错了很难恢复</span><br>make clean -n<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128153214440.png" srcset="/img/loading.gif" lazyload /></p>
+<p>确定没有问题后，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">make clean<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128153321833.png" srcset="/img/loading.gif" lazyload /></p></li>
+</ul>
+<h2 id="个自动变量和模式规则">3个自动变量和模式规则</h2>
+<ul>
+<li><p>自动变量</p>
+<blockquote>
+<p><code>$@</code> ：在规则<strong>命令中</strong>，表示规则中的<strong>目标 </strong>。</p>
+<p><code>$&lt;</code> ：在规则<strong>命令中</strong>，表示规则中的<strong>第一个条件</strong>，如果将该变量用在模式规则中，它可以将依赖条件列表中的依赖依次取出，套用模式规则 。</p>
+<p><code>$^</code> ：在规则<strong>命令中</strong>，表示规则中的<strong>所有条件</strong>，组成一个列表，以空格隔开，如果这个列表中有重复项，则去重。</p>
+</blockquote>
+<p>用自动变量修改 <code>makefile</code> 如下：</p>
+<p>（sub，add 这些指令中使用 <code>$&lt;</code> 和 <code>$^</code>都能达到效果，但是为了模式规则，所以使用的 <code>$&lt;</code> 执行 <code>make</code>）</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128155220586.png" srcset="/img/loading.gif" lazyload /></p>
+<p>执行 <code>make</code> 后：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128155245696.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>模式规则</p>
+<p>上面这个 <code>makefile</code>，可扩展性不行。比如，要添加一个乘法函数，就需要在 <code>makefile</code> 里面增加乘法函数的部分。不科学，所以，引入模式规则。</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">%.o:%.c<br></code></pre></div></td></tr></table></figure>
+<p>修改 <code>makefile</code>，如下：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128160158453.png" srcset="/img/loading.gif" lazyload /></p>
+<p>此时源码增加一个乘法文件，不修改 <code>makefile</code> 直接进行 <code>make</code>：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128161124598.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>静态模式规则</p>
+<p>继续优化 <code>makefile</code>，使用静态模式规则，就是指定模式规则给谁用，这里指定模式规则给 obj 用，以 后文件多了，文件集合会有很多个，就需要指定哪个文件集合用什么规则。</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 表示对依赖条件obj套用模式规则</span><br>$(obj):%.o:%.c<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128162329641.png" srcset="/img/loading.gif" lazyload /></p></li>
+</ul>
+<h2 id="补充">补充</h2>
+<ul>
+<li><p>clean 的补充</p>
+<p>若当前目录下有文件名叫 clean 或 ALL，在执行 <code>clean</code> 操作时，会影响 <code>make</code> 指令判断。</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128163253757.png" srcset="/img/loading.gif" lazyload /></p>
+<p>因此用伪目标来解决，添加一行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">.PHONY: clean ALL<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128163457458.png" srcset="/img/loading.gif" lazyload /></p>
+<p>再执行 <code>clean</code> 操作则删除成功：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128163547385.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>增加参数</p>
+<p>添加参数 <code>-Wall</code> 和 <code>-g</code> 后，在编译时会检查语法错误，且编译后可直接用 <code>gdb</code> 进行调试。</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128164134387.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128164425121.png" srcset="/img/loading.gif" lazyload /></p></li>
+</ul>
 
             </div>
             <hr>
@@ -850,6 +942,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/01/28/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%20-%20%E5%89%AF%E6%9C%AC/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Linux系统编程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
