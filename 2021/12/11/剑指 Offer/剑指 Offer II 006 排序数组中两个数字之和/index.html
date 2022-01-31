@@ -18,25 +18,25 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目：15.数组中和为 0 的三个数 剑指 Offer II 007. 数组中和为 0 的三个数 与主站15题相似 难度：中等">
+    <meta name="description" content="题目：318.排序数组中两个数字之和 剑指 Offer II 006. 排序数组中两个数字之和 与主站167题相似 难度：简单">
 <meta property="og:type" content="article">
-<meta property="og:title" content="力扣刷题日记2022&#x2F;1&#x2F;13">
-<meta property="og:url" content="http://zengyq.cn/2022/01/13/%E5%89%91%E6%8C%87%20Offer%20II%20007/index.html">
+<meta property="og:title" content="力扣刷题日记2021&#x2F;12&#x2F;11">
+<meta property="og:url" content="http://zengyq.cn/2021/12/11/%E5%89%91%E6%8C%87%20Offer/%E5%89%91%E6%8C%87%20Offer%20II%20006%20%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="题目：15.数组中和为 0 的三个数 剑指 Offer II 007. 数组中和为 0 的三个数 与主站15题相似 难度：中等">
+<meta property="og:description" content="题目：318.排序数组中两个数字之和 剑指 Offer II 006. 排序数组中两个数字之和 与主站167题相似 难度：简单">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
-<meta property="article:published_time" content="2022-01-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-13T09:50:42.262Z">
+<meta property="article:published_time" content="2021-12-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-13T12:43:27.393Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="力扣">
-<meta property="article:tag" content="中等">
+<meta property="article:tag" content="简单">
 <meta property="article:tag" content="数组">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
   
   
-  <title>力扣刷题日记2022/1/13 - 如此肤浅</title>
+  <title>力扣刷题日记2021/12/11 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -228,7 +228,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="力扣刷题日记2022/1/13">
+            <span class="h2" id="subtitle" title="力扣刷题日记2021/12/11">
               
             </span>
 
@@ -238,8 +238,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-01-13 00:00" pubdate>
-        2022年1月13日 凌晨
+      <time datetime="2021-12-11 00:00" pubdate>
+        2021年12月11日 凌晨
       </time>
     </span>
   
@@ -249,7 +249,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      375 字
+      1.1k 字
     </span>
   
 
@@ -258,7 +258,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      10 分钟
     </span>
   
 
@@ -287,34 +287,40 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">力扣刷题日记2022/1/13</h1>
+            <h1 style="display: none">力扣刷题日记2021/12/11</h1>
             
             <div class="markdown-body">
-              <h1 id="题目15.数组中和为-0-的三个数">题目：15.数组中和为 0 的三个数</h1>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/1fGaJU/">剑指 Offer II 007. 数组中和为 0 的三个数</a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/3sum/">与主站15题相似</a></p>
-<p><strong>难度：</strong><label style="color:orange">中等</label></p>
+              <h1 id="题目318.排序数组中两个数字之和">题目：318.排序数组中两个数字之和</h1>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/kLl5u1/">剑指 Offer II 006. 排序数组中两个数字之和</a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/">与主站167题相似</a></p>
+<p><strong>难度：</strong><label style="color:green">简单</label></p>
 <span id="more"></span>
-<p>给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a ，b ，c ，使得 a + b + c = 0 ？请找出所有和为 0 且 不重复 的三元组。</p>
+<p>给定一个已按照 升序排列 的整数数组 numbers ，请你从数组中找出两个数满足相加之和等于目标数 target 。</p>
+<p>函数应该以长度为 2 的整数数组的形式返回这两个数的下标值。numbers 的下标 从 0 开始计数 ，所以答案数组应当满足 $0 &lt;= answer[0] &lt; answer[1] &lt; numbers.length $。</p>
+<p>假设数组中存在且只存在一对符合条件的数字，同时一个数字不能使用两次。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight subunit"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs subunit">输入：nums = [<span class="hljs-string">-1</span>,0,1,2,<span class="hljs-string">-1</span>,<span class="hljs-string">-4</span>]<br>输出：[[<span class="hljs-string">-1</span>,<span class="hljs-string">-1</span>,2],[<span class="hljs-string">-1</span>,0,1]]<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nix">输入：<span class="hljs-attr">numbers</span> = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">10</span>], <span class="hljs-attr">target</span> = <span class="hljs-number">8</span><br>输出：[<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>解释：<span class="hljs-number">2</span> 与 <span class="hljs-number">6</span> 之和等于目标数 <span class="hljs-number">8</span> 。因此 <span class="hljs-attr">index1</span> = <span class="hljs-number">1</span>, <span class="hljs-attr">index2</span> = <span class="hljs-number">3</span> 。<br></code></pre></div></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight inform7"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs inform7">输入：nums = <span class="hljs-comment">[]</span><br>输出：<span class="hljs-comment">[]</span><br></code></pre></div></td></tr></table></figure>
+<figure class="highlight inform7"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs inform7">输入：numbers = <span class="hljs-comment">[2,3,4]</span>, target = 6<br>输出：<span class="hljs-comment">[0,2]</span><br></code></pre></div></td></tr></table></figure>
 <p><strong>示例3：</strong></p>
-<figure class="highlight inform7"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs inform7">输入：nums = <span class="hljs-comment">[0]</span><br>输出：<span class="hljs-comment">[]</span><br></code></pre></div></td></tr></table></figure>
+<figure class="highlight inform7"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs inform7">输入：numbers = <span class="hljs-comment">[-1,0]</span>, target = -1<br>输出：<span class="hljs-comment">[0,1]</span><br></code></pre></div></td></tr></table></figure>
 <p><strong>提示：</strong></p>
 <ul>
-<li><span class="math inline">\(0&lt;=nums.length&lt;=3000\)</span></li>
-<li><span class="math inline">\(-10^5&lt;=nums[i]&lt;=10^5\)</span></li>
+<li><span class="math inline">\(2&lt;=numbers.length&lt;=3*10^4\)</span></li>
+<li><span class="math inline">\(-1000&lt;=numbers[i]&lt;=1000\)</span></li>
+<li><span class="math inline">\(numbers\)</span>按 <strong>递增顺序</strong> 排序</li>
+<li><span class="math inline">\(-1000&lt;=target&lt;=1000\)</span></li>
+<li>仅存在一个有效答案</li>
 </ul>
 <p>来源：力扣（LeetCode）</p>
-<p>链接：https://leetcode-cn.com/problems/1fGaJU</p>
+<p>链接：https://leetcode-cn.com/problems/kLl5u1</p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 <h1 id="解题思路">解题思路</h1>
 <blockquote>
-
+<p>双指针。</p>
+<p>目前为止做过最简单题......</p>
 </blockquote>
 <h1 id="代码">代码</h1>
-<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><br></code></pre></div></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-keyword">int</span>&gt;&amp; numbers, <span class="hljs-keyword">int</span> target)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> first = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> second = numbers.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>        vector&lt;<span class="hljs-keyword">int</span>&gt; ret;<br>        <span class="hljs-keyword">while</span> (first &lt; second) &#123;<br>            <span class="hljs-keyword">if</span> (numbers[first] + numbers[second] &gt; target) &#123;<br>                second--;<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(numbers[first] + numbers[second] &lt; target) &#123;<br>                first++;<br>            &#125;<br>            <span class="hljs-keyword">else</span> &#123;<br>                ret.<span class="hljs-built_in">push_back</span>(first);<br>                ret.<span class="hljs-built_in">push_back</span>(second);<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br>&#125;;<br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
@@ -336,7 +342,7 @@
                     
                       <a class="hover-with-bg" href="/tags/%E5%8A%9B%E6%89%A3/">力扣</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E4%B8%AD%E7%AD%89/">中等</a>
+                      <a class="hover-with-bg" href="/tags/%E7%AE%80%E5%8D%95/">简单</a>
                     
                       <a class="hover-with-bg" href="/tags/%E6%95%B0%E7%BB%84/">数组</a>
                     
@@ -355,9 +361,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/01/13/%E5%8D%9A%E5%AE%A2%E5%86%99%E4%BD%9C%E7%AC%94%E8%AE%B0/">
+                      <a href="/2021/12/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">博客写作笔记</span>
+                        <span class="hidden-mobile">正则表达式</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -365,8 +371,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/12/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                        <span class="hidden-mobile">正则表达式</span>
+                      <a href="/2021/12/09/%E5%89%91%E6%8C%87%20Offer/%E5%89%91%E6%8C%87%20Offer%20II%20005%20%E5%8D%95%E8%AF%8D%E9%95%BF%E5%BA%A6%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/">
+                        <span class="hidden-mobile">力扣刷题日记2021/12/9</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

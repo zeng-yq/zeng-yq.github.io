@@ -18,23 +18,21 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目：338.前 n 个数字二进制中 1 的个数 剑指 Offer II 003. 前 n 个数字二进制中 1 的个数 与主站338题相同 难度：简单">
+    <meta name="description" content="题目：67.二进制加法 剑指 Offer II 002. 二进制加法 与主站67题相同 难度：简单">
 <meta property="og:type" content="article">
 <meta property="og:title" content="力扣刷题日记2021&#x2F;12&#x2F;7">
-<meta property="og:url" content="http://zengyq.cn/2021/12/07/%E5%89%91%E6%8C%87%20Offer%20II%20003%20%E5%89%8D%20n%20%E4%B8%AA%E6%95%B0%E5%AD%97%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD%201%20%E7%9A%84%E4%B8%AA%E6%95%B0/index.html">
+<meta property="og:url" content="http://zengyq.cn/2021/12/07/%E5%89%91%E6%8C%87%20Offer/%E5%89%91%E6%8C%87%20Offer%20II%20002%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="题目：338.前 n 个数字二进制中 1 的个数 剑指 Offer II 003. 前 n 个数字二进制中 1 的个数 与主站338题相同 难度：简单">
+<meta property="og:description" content="题目：67.二进制加法 剑指 Offer II 002. 二进制加法 与主站67题相同 难度：简单">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
 <meta property="article:published_time" content="2021-12-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-13T09:50:58.399Z">
+<meta property="article:modified_time" content="2022-01-13T09:51:06.015Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="力扣">
 <meta property="article:tag" content="整数">
 <meta property="article:tag" content="简单">
 <meta property="article:tag" content="位运算">
-<meta property="article:tag" content="动态规划">
-<meta property="article:tag" content="布莱恩·柯林汉算法">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
   
@@ -252,7 +250,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      2k 字
     </span>
   
 
@@ -261,7 +259,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12 分钟
+      17 分钟
     </span>
   
 
@@ -293,53 +291,45 @@
             <h1 style="display: none">力扣刷题日记2021/12/7</h1>
             
             <div class="markdown-body">
-              <h1 id="题目338.前-n-个数字二进制中-1-的个数">题目：338.前 n 个数字二进制中 1 的个数</h1>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/w3tCBm/">剑指 Offer II 003. 前 n 个数字二进制中 1 的个数</a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/counting-bits/">与主站338题相同</a></p>
+              <h1 id="题目67.二进制加法">题目：67.二进制加法</h1>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/JFETK5/">剑指 Offer II 002. 二进制加法</a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/add-binary/">与主站67题相同</a></p>
 <p><strong>难度：</strong><label style="color:green">简单</label></p>
 <span id="more"></span>
-<p>给定一个非负整数 n ，请计算 0 到 n 之间的每个数字的二进制表示中 1 的个数，并输出一个数组。</p>
+<p>给定两个 01 字符串 a 和 b ，请计算它们的和，并以二进制字符串的形式输出。</p>
+<p>输入为 非空 字符串且只包含数字 1 和 0。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight ada"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ada">输入: n = <span class="hljs-number">2</span><br>输出: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>解释: <br><span class="hljs-number">0</span> <span class="hljs-comment">--&gt; 0</span><br><span class="hljs-number">1</span> <span class="hljs-comment">--&gt; 1</span><br><span class="hljs-number">2</span> <span class="hljs-comment">--&gt; 10</span><br></code></pre></div></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nix">输入: <span class="hljs-attr">a</span> = <span class="hljs-string">&quot;11&quot;</span>, <span class="hljs-attr">b</span> = <span class="hljs-string">&quot;10&quot;</span><br>输出: <span class="hljs-string">&quot;101&quot;</span><br></code></pre></div></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight ada"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ada">输入: n = <span class="hljs-number">5</span><br>输出: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]<br>解释:<br><span class="hljs-number">0</span> <span class="hljs-comment">--&gt; 0</span><br><span class="hljs-number">1</span> <span class="hljs-comment">--&gt; 1</span><br><span class="hljs-number">2</span> <span class="hljs-comment">--&gt; 10</span><br><span class="hljs-number">3</span> <span class="hljs-comment">--&gt; 11</span><br><span class="hljs-number">4</span> <span class="hljs-comment">--&gt; 100</span><br><span class="hljs-number">5</span> <span class="hljs-comment">--&gt; 101</span><br></code></pre></div></td></tr></table></figure>
-<p><strong>说明：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nix">输入: <span class="hljs-attr">a</span> = <span class="hljs-string">&quot;1010&quot;</span>, <span class="hljs-attr">b</span> = <span class="hljs-string">&quot;1011&quot;</span><br>输出: <span class="hljs-string">&quot;10101&quot;</span><br></code></pre></div></td></tr></table></figure>
+<p><strong>提示：</strong></p>
 <ul>
-<li><span class="math inline">\(1&lt;=n&lt;=10^5\)</span></li>
-</ul>
-<p><strong>进阶：</strong></p>
-<ul>
-<li>给出时间复杂度为 <span class="math inline">\(O(n*sizeof(integer))\)</span> 的解答非常容易。但你可以在线性时间 <span class="math inline">\(O(n)\)</span> 内用一趟扫描做到吗？</li>
+<li>每个字符串仅由字符 '0' 或 '1' 组成。</li>
+<li><span class="math inline">\(1&lt;=a.length, b.length&lt;=10^4\)</span></li>
+<li>字符串如果不是 "0" ，就都不含前导零。</li>
 </ul>
 <p>来源：力扣（LeetCode）</p>
-<p>链接：https://leetcode-cn.com/problems/w3tCBm</p>
+<p>链接：https://leetcode-cn.com/problems/JFETK5</p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 <h1 id="解题思路">解题思路</h1>
 <blockquote>
-<p><strong>方法一：</strong></p>
-<p>时间复杂度： <span class="math inline">\(O(n*sizeof(integer))\)</span></p>
-<p>最容易想到的方式，遍历每个数，采用<strong>右移</strong>逐个求出1的个数。</p>
-<p><strong>求一个整数的二进制形式：</strong></p>
-<p>若一个数是奇数，那么这个数二进制形式的最后一位一定为1。通过这个规则，不断对该整数进行右移（除以2）操作，若每右移一次得到的结果为一个奇数，则该结果二进制形式中最后一位为1。由此可以得到二进制形式。</p>
+<p><strong>参考十进制加法：</strong></p>
+<ol type="1">
+<li>将两个二进制数右端对齐；</li>
+<li>从字符串右端开始，从右向左做加法；</li>
+<li>逢二进一；</li>
+<li>时间复杂度为<span class="math inline">\(O(max(len_a, len_b))\)</span>。</li>
+</ol>
 </blockquote>
 <blockquote>
-<p><strong>方法二：</strong><label style="color:blue">Brian Kernighan（布莱恩·柯林汉) 算法</label></p>
-<p><label style="color:red">后面需要重做</label></p>
-<p>时间复杂度：<span class="math inline">\(O(n logn)\)</span></p>
-<p>对于任意整数 <span class="math inline">\(x\)</span>，令 $ x=x&amp;(x-1)$，该运算将 <span class="math inline">\(x\)</span> 的二进制表示的最后一个 1 变成 0。因此，对 <span class="math inline">\(x\)</span> 重复该操作，直到 <span class="math inline">\(x\)</span> 变成 0，则操作次数即为 <span class="math inline">\(x\)</span> 的“一比特数”。</p>
-</blockquote>
-<blockquote>
-<p><strong>方法三：</strong>动态规划</p>
-<p><label style="color:red">后面需要重做</label></p>
-<p>时间复杂度：<span class="math inline">\(O(n)\)</span></p>
-<p>由方法二可发现，整数 <span class="math inline">\(i\)</span> 的二进制形式中 1 的个数比 <span class="math inline">\(i\&amp;(i-1)\)</span> 的二进制形式中 1 的个数多 1，可根据这个规律采用动态规划来做。</p>
-</blockquote>
-<blockquote>
-<p><strong>薄弱知识点：</strong></p>
-<p>位运算比除法运算和求余运算更高效，因此，可用 <span class="math inline">\(i&gt;&gt;1\)</span>代替 <span class="math inline">\(i/2\)</span>，可用 <span class="math inline">\(i\&amp;1\)</span> 计算 <span class="math inline">\(i\%2\)</span>。</p>
+<p><strong>心得：</strong></p>
+<ol type="1">
+<li><p>力扣题解分析了另一种不可行的思路，我在写时没有考虑到这方面：</p>
+<p>将两个二进制数分别转换为十进制数，相加后再转换为二进制数，即可得到答案。</p>
+<p>但该方法的不足：①题目二进制字符串的长度过长，两数相加时可能会溢出；②时间复杂度为<span class="math inline">\(O(len_a + len_b)\)</span>。</p></li>
+</ol>
 </blockquote>
 <h1 id="代码">代码</h1>
-<p><strong>方法一：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">countBits</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>&#123;<br>        vector&lt;<span class="hljs-keyword">int</span>&gt; tmp;<br><br>        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>) <br>            tmp.<span class="hljs-built_in">push_back</span>(<span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">else</span> <br>        &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= n; i++)<br>                tmp.<span class="hljs-built_in">push_back</span>(<span class="hljs-built_in">counter</span>(i));<br>        &#125;<br>        <span class="hljs-keyword">return</span> tmp;<br>    &#125;<br><br>    <span class="hljs-comment">//计算number对于二进制中1的个数</span><br>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">counter</span><span class="hljs-params">(<span class="hljs-keyword">int</span>&amp; number)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> num = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> tmp = number;<br>        <br>        <span class="hljs-keyword">if</span> (number % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>)<br>            num++;<br><br>        tmp = tmp &gt;&gt; <span class="hljs-number">1</span>;<br><br>        <span class="hljs-keyword">while</span> (tmp != <span class="hljs-number">0</span>) <br>        &#123;<br>            <span class="hljs-keyword">if</span> (tmp % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>)<br>                num++;<br>            tmp = tmp &gt;&gt; <span class="hljs-number">1</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> num;<br>    &#125;<br>&#125;;<br><br></code></pre></div></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">string <span class="hljs-title">addBinary</span><span class="hljs-params">(string a, string b)</span> </span>&#123;<br>        <span class="hljs-comment">//向右对齐，位数少的左边补0</span><br>        <span class="hljs-keyword">int</span> len_a = a.<span class="hljs-built_in">length</span>();<br>        <span class="hljs-keyword">int</span> len_b = b.<span class="hljs-built_in">length</span>();<br>        deque&lt;<span class="hljs-keyword">char</span>&gt; ret_deque;<br>        string ret_str;<br>        <span class="hljs-keyword">if</span> (len_a &lt; len_b)<br>        &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len_b - len_a; i++)<br>                a = <span class="hljs-string">&#x27;0&#x27;</span> + a;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (len_a &gt; len_b)<br>        &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len_a - len_b; i++)<br>                b = <span class="hljs-string">&#x27;0&#x27;</span> + b;<br>        &#125;<br><br>        <span class="hljs-keyword">char</span> carry_bit = <span class="hljs-string">&#x27;0&#x27;</span>;    <span class="hljs-comment">//记录向前的进位</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = a.<span class="hljs-built_in">length</span>() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)<br>        &#123;<br>            <span class="hljs-keyword">if</span> ((a[i] == <span class="hljs-string">&#x27;1&#x27;</span> &amp;&amp; b[i] == <span class="hljs-string">&#x27;0&#x27;</span>) || (a[i] == <span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; b[i] == <span class="hljs-string">&#x27;1&#x27;</span>))<br>            &#123;<br>                <span class="hljs-keyword">if</span> (carry_bit == <span class="hljs-string">&#x27;1&#x27;</span>) <br>                &#123;<br>                    ret_deque.<span class="hljs-built_in">push_front</span>(<span class="hljs-string">&#x27;0&#x27;</span>);<br>                    carry_bit = <span class="hljs-string">&#x27;1&#x27;</span>;<br>                &#125;<br>                <span class="hljs-keyword">else</span><br>                &#123;<br>                    ret_deque.<span class="hljs-built_in">push_front</span>(<span class="hljs-string">&#x27;1&#x27;</span>);<br>                    carry_bit = <span class="hljs-string">&#x27;0&#x27;</span>;<br>                &#125;<br>                <br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a[i] == <span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; b[i] == <span class="hljs-string">&#x27;0&#x27;</span>)<br>            &#123;<br>                <span class="hljs-keyword">if</span> (carry_bit == <span class="hljs-string">&#x27;1&#x27;</span>)<br>                    ret_deque.<span class="hljs-built_in">push_front</span>(<span class="hljs-string">&#x27;1&#x27;</span>);<br>                <span class="hljs-keyword">else</span><br>                    ret_deque.<span class="hljs-built_in">push_front</span>(<span class="hljs-string">&#x27;0&#x27;</span>);<br><br>                carry_bit = <span class="hljs-string">&#x27;0&#x27;</span>;<br>            &#125;<br>            <span class="hljs-keyword">else</span><br>            &#123;<br>                <span class="hljs-keyword">if</span> (carry_bit == <span class="hljs-string">&#x27;1&#x27;</span>)<br>                &#123;<br>                    ret_deque.<span class="hljs-built_in">push_front</span>(<span class="hljs-string">&#x27;1&#x27;</span>);<br>                    carry_bit = <span class="hljs-string">&#x27;1&#x27;</span>;<br>                &#125;<br>                <span class="hljs-keyword">else</span><br>                &#123;<br>                    ret_deque.<span class="hljs-built_in">push_front</span>(<span class="hljs-string">&#x27;0&#x27;</span>);<br>                    carry_bit = <span class="hljs-string">&#x27;1&#x27;</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (carry_bit == <span class="hljs-string">&#x27;1&#x27;</span>)<br>            ret_deque.<span class="hljs-built_in">push_front</span>(<span class="hljs-string">&#x27;1&#x27;</span>);<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; ret_deque.<span class="hljs-built_in">size</span>(); i++)<br>            ret_str += ret_deque[i];<br><br>        <span class="hljs-keyword">return</span> ret_str;<br>    &#125;<br>&#125;;<br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
@@ -367,10 +357,6 @@
                     
                       <a class="hover-with-bg" href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E5%B8%83%E8%8E%B1%E6%81%A9%C2%B7%E6%9F%AF%E6%9E%97%E6%B1%89%E7%AE%97%E6%B3%95/">布莱恩·柯林汉算法</a>
-                    
                   </div>
                 
               </div>
@@ -386,9 +372,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/12/07/%E5%89%91%E6%8C%87%20Offer%20II%20002%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95/">
+                      <a href="/2021/12/08/%E5%89%91%E6%8C%87%20Offer/%E5%89%91%E6%8C%87%20Offer%20II%20004%20%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">力扣刷题日记2021/12/7</span>
+                        <span class="hidden-mobile">力扣刷题日记2021/12/8</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -396,8 +382,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/12/06/%E5%89%91%E6%8C%87%20Offer%20II%20001%20%E6%95%B4%E6%95%B0%E9%99%A4%E6%B3%95/">
-                        <span class="hidden-mobile">力扣刷题日记2021/12/6</span>
+                      <a href="/2021/12/07/%E5%89%91%E6%8C%87%20Offer/%E5%89%91%E6%8C%87%20Offer%20II%20003%20%E5%89%8D%20n%20%E4%B8%AA%E6%95%B0%E5%AD%97%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD%201%20%E7%9A%84%E4%B8%AA%E6%95%B0/">
+                        <span class="hidden-mobile">力扣刷题日记2021/12/7</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -18,27 +18,26 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目：318.单词长度的最大乘积 剑指 Offer II 005. 单词长度的最大乘积 与主站318题相同 难度：中等">
+    <meta name="description" content="题目： 29.两数相除 剑指 Offer II 001. 整数除法 与主站 29 题相同 难度：简单 （后面需要重新做）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="力扣刷题日记2021&#x2F;12&#x2F;9">
-<meta property="og:url" content="http://zengyq.cn/2021/12/09/%E5%89%91%E6%8C%87%20Offer%20II%20005%20%E5%8D%95%E8%AF%8D%E9%95%BF%E5%BA%A6%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF/index.html">
+<meta property="og:title" content="力扣刷题日记2021&#x2F;12&#x2F;6">
+<meta property="og:url" content="http://zengyq.cn/2021/12/06/%E5%89%91%E6%8C%87%20Offer/%E5%89%91%E6%8C%87%20Offer%20II%20001%20%E6%95%B4%E6%95%B0%E9%99%A4%E6%B3%95/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="题目：318.单词长度的最大乘积 剑指 Offer II 005. 单词长度的最大乘积 与主站318题相同 难度：中等">
+<meta property="og:description" content="题目： 29.两数相除 剑指 Offer II 001. 整数除法 与主站 29 题相同 难度：简单 （后面需要重新做）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
-<meta property="article:published_time" content="2021-12-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-13T09:50:48.961Z">
+<meta property="article:published_time" content="2021-12-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-13T09:50:27.261Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="力扣">
 <meta property="article:tag" content="整数">
+<meta property="article:tag" content="简单">
 <meta property="article:tag" content="位运算">
-<meta property="article:tag" content="中等">
-<meta property="article:tag" content="哈希表">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/leetcode.png">
   
   
-  <title>力扣刷题日记2021/12/9 - 如此肤浅</title>
+  <title>力扣刷题日记2021/12/6 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -230,7 +229,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="力扣刷题日记2021/12/9">
+            <span class="h2" id="subtitle" title="力扣刷题日记2021/12/6">
               
             </span>
 
@@ -240,8 +239,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-12-09 00:00" pubdate>
-        2021年12月9日 凌晨
+      <time datetime="2021-12-06 00:00" pubdate>
+        2021年12月6日 凌晨
       </time>
     </span>
   
@@ -251,7 +250,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.1k 字
+      1.1k 字
     </span>
   
 
@@ -260,7 +259,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      26 分钟
+      10 分钟
     </span>
   
 
@@ -289,57 +288,54 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">力扣刷题日记2021/12/9</h1>
+            <h1 style="display: none">力扣刷题日记2021/12/6</h1>
             
             <div class="markdown-body">
-              <h1 id="题目318.单词长度的最大乘积">题目：318.单词长度的最大乘积</h1>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/aseY1I/">剑指 Offer II 005. 单词长度的最大乘积</a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-product-of-word-lengths/">与主站318题相同</a></p>
-<p><strong>难度：</strong><label style="color:orange">中等</label></p>
+              <h1 id="题目-29.两数相除">题目： 29.两数相除</h1>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/xoh6Oh/">剑指 Offer II 001. 整数除法</a> <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/divide-two-integers/">与主站 29 题相同</a></p>
+<p><strong>难度：</strong><label style="color:green">简单</label> <label style="color:red">（后面需要重新做）</label></p>
 <span id="more"></span>
-<p>给定一个字符串数组 words，请计算当两个字符串 words[i] 和 words[j] 不包含相同字符时，它们长度的乘积的最大值。假设字符串中只包含英语的小写字母。如果没有不包含相同字符的一对字符串，返回 0。</p>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight applescript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs applescript">输入: <span class="hljs-built_in">words</span> = [<span class="hljs-string">&quot;abcw&quot;</span>,<span class="hljs-string">&quot;baz&quot;</span>,<span class="hljs-string">&quot;foo&quot;</span>,<span class="hljs-string">&quot;bar&quot;</span>,<span class="hljs-string">&quot;fxyz&quot;</span>,<span class="hljs-string">&quot;abcdef&quot;</span>]<br>输出: <span class="hljs-number">16</span> <br>解释: 这两个单词为 <span class="hljs-string">&quot;abcw&quot;</span>, <span class="hljs-string">&quot;fxyz&quot;</span>。它们不包含相同字符，且长度的乘积最大。<br></code></pre></div></td></tr></table></figure>
-<p><strong>示例 2:</strong></p>
-<figure class="highlight applescript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs applescript">输入: <span class="hljs-built_in">words</span> = [<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;ab&quot;</span>,<span class="hljs-string">&quot;abc&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>,<span class="hljs-string">&quot;cd&quot;</span>,<span class="hljs-string">&quot;bcd&quot;</span>,<span class="hljs-string">&quot;abcd&quot;</span>]<br>输出: <span class="hljs-number">4</span> <br>解释: 这两个单词为 <span class="hljs-string">&quot;ab&quot;</span>, <span class="hljs-string">&quot;cd&quot;</span>。<br></code></pre></div></td></tr></table></figure>
+<p>给定两个整数 a 和 b ，求它们的除法的商 a/b ，要求不得使用乘号 '*'、除号 '/' 以及求余符号 '%' 。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>数除法的结果应当截去（truncate）其小数部分，例如：truncate(8.345) = 8 以及 truncate(-2.7335) = -2</li>
+<li>假设我们的环境只能存储 32 位有符号整数，其数值范围是 [<span class="math inline">\(-2^{31}\)</span>, <span class="math inline">\(2^{31}-1\)</span>]。本题中，如果除法结果溢出，则返回 <span class="math inline">\(2^{31}-1\)</span></li>
+</ul>
+<p><strong>示例1：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nix">输入：<span class="hljs-attr">a</span> = <span class="hljs-number">15</span>, <span class="hljs-attr">b</span> = <span class="hljs-number">2</span><br>输出：<span class="hljs-number">7</span><br>解释：<span class="hljs-number">15</span>/<span class="hljs-number">2</span> = truncate(<span class="hljs-number">7.5</span>) = <span class="hljs-number">7</span><br></code></pre></div></td></tr></table></figure>
+<p><strong>示例2：</strong></p>
+<figure class="highlight subunit"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs subunit">输入：a = 7, b = <span class="hljs-string">-3</span><br>输出：<span class="hljs-string">-2</span><br>解释：7/<span class="hljs-string">-3</span> = truncate(<span class="hljs-string">-2</span>.33333..) = <span class="hljs-string">-2</span><br></code></pre></div></td></tr></table></figure>
 <p><strong>示例3：</strong></p>
-<figure class="highlight applescript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs applescript">输入: <span class="hljs-built_in">words</span> = [<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;aa&quot;</span>,<span class="hljs-string">&quot;aaa&quot;</span>,<span class="hljs-string">&quot;aaaa&quot;</span>]<br>输出: <span class="hljs-number">0</span> <br>解释: 不存在这样的两个单词。<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nix">输入：<span class="hljs-attr">a</span> = <span class="hljs-number">0</span>, <span class="hljs-attr">b</span> = <span class="hljs-number">1</span><br>输出：<span class="hljs-number">0</span><br></code></pre></div></td></tr></table></figure>
+<p><strong>示例4：</strong></p>
+<figure class="highlight nix"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nix">输入：<span class="hljs-attr">a</span> = <span class="hljs-number">1</span>, <span class="hljs-attr">b</span> = <span class="hljs-number">1</span><br>输出：<span class="hljs-number">1</span><br></code></pre></div></td></tr></table></figure>
 <p><strong>提示：</strong></p>
 <ul>
-<li><span class="math inline">\(2&lt;=words.length&lt;=1000\)</span></li>
-<li><span class="math inline">\(1&lt;=words[i].length&lt;=1000\)</span></li>
-<li><span class="math inline">\(words[i]\)</span>仅包含小写字母</li>
+<li><span class="math inline">\(-2^{31}&lt;=a, b&lt;=2^{31}-1\)</span></li>
+<li><span class="math inline">\(b != 0\)</span></li>
 </ul>
 <p>来源：力扣（LeetCode）</p>
-<p>链接：https://leetcode-cn.com/problems/aseY1I</p>
+<p>链接：https://leetcode-cn.com/problems/xoh6Oh</p>
 <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 <h1 id="解题思路">解题思路</h1>
 <blockquote>
-<p><strong>方法一：</strong>（最笨的方法，且会超时）</p>
-<p>时间复杂度：<span class="math inline">\(O(n^2 * m^2)\)</span>，<span class="math inline">\(n\)</span>为数组长度，<span class="math inline">\(m\)</span>为字符串的平均长度。</p>
-<p>该暴力求解的方法提交后会超时。嵌套两个<span class="math inline">\(for\)</span>循环进行字符串两两比较，在比较时再对两个字符串中的字符进行逐个比较，比较时调用了<span class="math inline">\(find()\)</span>函数。因此，相当于有了四层嵌套循环，时间复杂度很高。</p>
-</blockquote>
-<blockquote>
-<p><strong>方法二：</strong>（哈希表）</p>
-<p>对于每个字符串，可以用一个哈希表记录出现在该字符串中的所有字符。在判断两个字符串 <span class="math inline">\(str1\)</span> 和 <span class="math inline">\(str2\)</span> 中是否有相同的字符时，只需要从 'a' 到 'z' 判断某个字符是否在两个字符串对应的哈希表中都出现了。在哈希表中查找的时间复杂度是 <span class="math inline">\(O(1)\)</span>。</p>
-</blockquote>
-<blockquote>
-<p><strong>方法三：</strong></p>
-<p>时间复杂度：若数组 words 的长度为 n，平均每个字符串的长度为 k，那么时间复杂度为 <span class="math inline">\(O(nk + n^2)\)</span>。</p>
 <ol type="1">
-<li>用一个数字二进制表示中的每一位记录一个字母是否出现，例如，字符串 <span class="math inline">\(ac\)</span> 可以用 <span class="math inline">\(00000000 00000000 00000000 00000101 = 3\)</span> 表示；</li>
-<li>将每一个字符串中字母是否出现均用一个数字表示表示出来，当比较两个字符串是否存在相同字母时，使用 <span class="math inline">\(num1 \&amp; num2 == 0\)</span> 就可以轻易判断出来了。</li>
+<li>用减法来代替除法；</li>
+<li>先将被除数和除数都看成负数，最后再修改结果的正负值；</li>
+<li>考虑溢出情况。</li>
 </ol>
 </blockquote>
 <blockquote>
-<p><label style="color:Sienna">要深刻理解各种位运算的特点才能灵活地运用位运算来解决问题！！！</label></p>
+<p><strong>薄弱知识点：</strong></p>
+<ol type="1">
+<li>C++ 中 <code>INT_MIN</code> 和 <code>INT_MAX</code> 可直接得到整型的最小值和最大值；</li>
+<li>灵活使用三目运算符；</li>
+<li>32位有符号数，最大整数为<span class="math inline">\(2^{32}-1\)</span>，最小整数为<span class="math inline">\(-2^{32}\)</span>。</li>
+<li>为什么 <code>unsigned</code> 改成 <code>int</code> 就会超时？ <code>unsigned</code> 的处理速度更快？<label style="color:red">（没搞懂）</label></li>
+</ol>
 </blockquote>
 <h1 id="代码">代码</h1>
-<p><strong>方法一：</strong>（力扣中会超时）</p>
-<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxProduct</span><span class="hljs-params">(vector&lt;string&gt;&amp; words)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> ret = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> tmp = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; words.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i++) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; words.<span class="hljs-built_in">size</span>(); j++) &#123;<br>                <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">has_same_letter</span>(words[i], words[j])) &#123;<br>                    tmp = words[i].<span class="hljs-built_in">size</span>() * words[j].<span class="hljs-built_in">size</span>();<br>                    <span class="hljs-keyword">if</span> (tmp &gt; ret)<br>                        ret = tmp;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">has_same_letter</span><span class="hljs-params">(<span class="hljs-keyword">const</span> string&amp; a, <span class="hljs-keyword">const</span> string&amp; b)</span> </span>&#123;<br>        <span class="hljs-keyword">bool</span> flag = <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; a.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">auto</span> it = <span class="hljs-built_in">find</span>(b.<span class="hljs-built_in">begin</span>(), b.<span class="hljs-built_in">end</span>(), a[i]);<br>            <span class="hljs-keyword">if</span> (it != b.<span class="hljs-built_in">end</span>()) &#123;<br>                flag = <span class="hljs-literal">true</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> flag;<br>    &#125;<br>&#125;;<br></code></pre></div></td></tr></table></figure>
-<p><strong>方法二：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxProduct</span><span class="hljs-params">(vector&lt;string&gt;&amp; words)</span> </span>&#123;<br>        vector&lt;<span class="hljs-keyword">int</span>&gt; words_num;<br>        <span class="hljs-keyword">int</span> ret = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; words.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">int</span> tmp = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; words[i].<span class="hljs-built_in">size</span>(); j++) &#123;<br>                tmp |= <span class="hljs-number">1</span> &lt;&lt; (words[i][j] - <span class="hljs-string">&#x27;a&#x27;</span>);<br>            &#125;<br>            words_num.<span class="hljs-built_in">push_back</span>(tmp);<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; words.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>; i++) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; words.<span class="hljs-built_in">size</span>(); j++) &#123;<br>                <span class="hljs-keyword">if</span> (!(words_num[i] &amp; words_num[j])) &#123;<br>                    <span class="hljs-keyword">int</span> tmp = words[i].<span class="hljs-built_in">size</span>() * words[j].<span class="hljs-built_in">size</span>();<br>                    <span class="hljs-keyword">if</span> (tmp &gt; ret) &#123;<br>                        ret = tmp;<br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br>&#125;;<br></code></pre></div></td></tr></table></figure>
-<p><strong>方法三：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxProduct</span><span class="hljs-params">(vector&lt;string&gt;&amp; words)</span> </span>&#123;<br>        vector&lt;<span class="hljs-keyword">int</span>&gt; words_num;<br>        <span class="hljs-keyword">int</span> ret = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; words.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">int</span> tmp = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; words[i].<span class="hljs-built_in">size</span>(); j++) &#123;<br>                tmp |= <span class="hljs-number">1</span> &lt;&lt; (words[i][j] - <span class="hljs-string">&#x27;a&#x27;</span>);<br>            &#125;<br>            words_num.<span class="hljs-built_in">push_back</span>(tmp);<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; words.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>; i++) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; words.<span class="hljs-built_in">size</span>(); j++) &#123;<br>                <span class="hljs-keyword">if</span> (!(words_num[i] &amp; words_num[j])) &#123;<br>                    <span class="hljs-keyword">int</span> tmp = words[i].<span class="hljs-built_in">size</span>() * words[j].<span class="hljs-built_in">size</span>();<br>                    <span class="hljs-keyword">if</span> (tmp &gt; ret) &#123;<br>                        ret = tmp;<br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br>&#125;;<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c++"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">divide</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span> (a == <span class="hljs-number">0x80000000</span> &amp;&amp; b == <span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span> INT_MAX;<br>        <br>        <span class="hljs-keyword">int</span> flag = (a &gt; <span class="hljs-number">0</span>) ^ (b &gt; <span class="hljs-number">0</span>) ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>;<br>        <span class="hljs-keyword">unsigned</span> ret = <span class="hljs-number">0</span>;<br><br>        <span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">0</span>)  a = -a;<br>        <span class="hljs-keyword">if</span> (b &gt; <span class="hljs-number">0</span>)  b = -b;<br><br>        <span class="hljs-keyword">while</span> (a &lt;= b)<br>        &#123;<br>            <span class="hljs-keyword">int</span> value = b;<br>            <span class="hljs-keyword">unsigned</span> quotient = <span class="hljs-number">1</span>;   <span class="hljs-comment">//商</span><br>            <span class="hljs-keyword">while</span> (value &gt;= <span class="hljs-number">0xc0000000</span> &amp;&amp; a &lt;= (value + value)) <br>            &#123;<br>                quotient += quotient;<br>                value += value;<br>            &#125;<br>            ret += quotient;<br>            a -= value;<br>        &#125;<br>        <span class="hljs-keyword">return</span> flag==<span class="hljs-number">1</span> ? -ret : ret;<br>    &#125;<br>&#125;;<br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
@@ -363,11 +359,9 @@
                     
                       <a class="hover-with-bg" href="/tags/%E6%95%B4%E6%95%B0/">整数</a>
                     
+                      <a class="hover-with-bg" href="/tags/%E7%AE%80%E5%8D%95/">简单</a>
+                    
                       <a class="hover-with-bg" href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E4%B8%AD%E7%AD%89/">中等</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">哈希表</a>
                     
                   </div>
                 
@@ -384,9 +378,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/12/11/%E5%89%91%E6%8C%87%20Offer%20II%20006%20%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97%E4%B9%8B%E5%92%8C/">
+                      <a href="/2021/12/07/%E5%89%91%E6%8C%87%20Offer/%E5%89%91%E6%8C%87%20Offer%20II%20003%20%E5%89%8D%20n%20%E4%B8%AA%E6%95%B0%E5%AD%97%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD%201%20%E7%9A%84%E4%B8%AA%E6%95%B0/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">力扣刷题日记2021/12/11</span>
+                        <span class="hidden-mobile">力扣刷题日记2021/12/7</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -394,8 +388,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/12/08/%E5%89%91%E6%8C%87%20Offer%20II%20004%20%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/">
-                        <span class="hidden-mobile">力扣刷题日记2021/12/8</span>
+                      <a href="/2021/10/19/%E7%88%AC%E8%99%AB/">
+                        <span class="hidden-mobile">爬虫</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
