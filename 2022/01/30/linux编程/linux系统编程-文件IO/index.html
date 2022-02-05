@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220128165013.png">
 <meta property="article:published_time" content="2022-01-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-30T03:16:05.176Z">
+<meta property="article:modified_time" content="2022-02-03T07:59:28.722Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.1k 字
+      36 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      18 分钟
+      1 分钟
     </span>
   
 
@@ -288,128 +288,8 @@
             <h1 style="display: none">Linux系统编程-文件IO</h1>
             
             <div class="markdown-body">
-              <p>本文顺序对应视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KE411q7ee?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click">黑马程序员-Linux系统编程_哔哩哔哩_bilibili</a></p>
-<h1 id="manpage介绍">manpage介绍</h1>
-<p>使用 <code>man</code> 命令，查看的就是 manpage，man 就是 manual（手册）的缩写。man page 按照文档主题的不同，分成9个部分。</p>
-<ol type="1">
-<li>Executable programs or shell commands</li>
-<li>System calls</li>
-<li>Library calls (functions within program libraries)</li>
-<li>Special files (usually found in /dev)</li>
-<li>File formats and conventions (eg /etc/passwd)</li>
-<li>Games</li>
-<li>Miscellaneous (including macro packages and conventions)</li>
-<li>System administration commands (usually only for root)</li>
-<li>Kernel routines</li>
-</ol>
-<p>使用时，通过以下命令越读 <code>man</code> 手册：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">man 手册名<br><span class="hljs-comment"># 例如：</span><br>man 5 passwd<br></code></pre></div></td></tr></table></figure>
-<p><strong>注意：</strong></p>
-<p>在 vim 中编写代码时，光标在某个函数上时，在命令模式下按 <code>2K</code> 则会直接跳转到该函数在 <code>manpage</code> 中所在位置。</p>
-<h1 id="open函数">open函数</h1>
-<p>打开或者创建一个文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 在manpage 第二卷</span><br>man 2 open<br></code></pre></div></td></tr></table></figure>
-<ul>
-<li><p>函数定义</p>
-<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-comment">// 在使用open函数时候需要添加的头文件如下：</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/stat.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;fcntl.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">open</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *pathname, <span class="hljs-keyword">int</span> flags)</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">open</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *pathname, <span class="hljs-keyword">int</span> flags, <span class="hljs-keyword">mode_t</span> mode)</span></span>;<br></code></pre></div></td></tr></table></figure></li>
-<li><p>返回值</p>
-<p>如果操作成功，返回一个文件描述符，如果操作失败，返回-1。</p></li>
-<li><p>参数</p>
-<ul>
-<li><p>pathname</p>
-<p>想要打开的文件路径名</p></li>
-<li><p>flags</p>
-<p>打开文件所采用的操作；</p>
-<p>必须常量，且只允许指定一个：O_RDONLY（只读）、O_WRONLY（只写）、O_RDW（读写）；</p>
-<p>可选常量：O_APPEND、O_CREAT、O_TRUNC......</p></li>
-<li><p>mode</p>
-<p>mode参数表示设置文件访问权限的初始值，和用户掩码umask有关，比如0644表示-rw-r-–r–-。第三个参数是在第二个参数中有 <code>O_CREAT</code> 时才起作用，如果没有，则第三个参数可以忽略。</p></li>
-</ul></li>
-</ul>
-<p>例如：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128215406697.png" srcset="/img/loading.gif" lazyload /></p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220128215435740.png" srcset="/img/loading.gif" lazyload /></p>
-<h1 id="readwrite函数">read/write函数</h1>
-<p>读/写文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 在manpage 第二卷</span><br>man 2 <span class="hljs-built_in">read</span><br>man 2 write<br></code></pre></div></td></tr></table></figure>
-<h2 id="read函数">read函数</h2>
-<ul>
-<li><p>函数定义</p>
-<p>read() attempts to read up to count bytes from file descriptor fd into the buffer starting at buf.</p>
-<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">ssize_t</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">void</span> *buf, <span class="hljs-keyword">size_t</span> count)</span></span>;<br></code></pre></div></td></tr></table></figure></li>
-<li><p>返回值</p>
-<ul>
-<li>0：读到文件末尾。</li>
-<li>成功：（ &gt; 0 ）读到的字节数。</li>
-<li>失败： -1， 设置 errno = -1； 并且 errno = EAGIN 或 EWOULDBLOCK， 说明不是 read 失败，而是 read 在以非阻塞方式读一个设备文件或网络文件，并且文件无数据（因此，返回 -1 时不能简单认为是读失败。<strong>参考下面阻塞和非阻塞部分</strong>）。</li>
-</ul></li>
-<li><p>参数</p>
-<ul>
-<li><p>fd：文件描述符</p>
-<p><code>STDIN_FILENO：0</code></p>
-<p><code>STDOUT_FILENO：1</code></p>
-<p><code>STDERR_FILENO：2</code></p></li>
-<li><p>buf：存数据的缓冲区</p></li>
-<li><p>count：缓冲区大小</p></li>
-</ul></li>
-</ul>
-<h2 id="write函数">write函数</h2>
-<ul>
-<li><p>函数定义</p>
-<p>write() writes up to count bytes from the buffer pointed buf to the file referred to by the file descriptor fd.</p>
-<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">ssize_t</span> <span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *buf, <span class="hljs-keyword">size_t</span> count)</span></span>;<br></code></pre></div></td></tr></table></figure></li>
-<li><p>返回值</p>
-<ul>
-<li>成功： 写入的字节数</li>
-<li>失败： -1， 设置 errno</li>
-</ul></li>
-<li><p>参数</p>
-<ul>
-<li><p>fd：文件描述符</p></li>
-<li><p>buf：待写出数据的缓冲区</p></li>
-<li><p>count：数据大小</p></li>
-</ul></li>
-</ul>
-<h2 id="read和write实现cp">read和write实现cp</h2>
-<p>编写代码：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220129101027228.png" srcset="/img/loading.gif" lazyload /></p>
-<p>编译文件：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220129101002880.png" srcset="/img/loading.gif" lazyload /></p>
-<p>测试一下：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220129101204956.png" srcset="/img/loading.gif" lazyload /></p>
-<p>可以在函数里加入错误检测：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220129105024844.png" srcset="/img/loading.gif" lazyload /></p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220129104944125.png" srcset="/img/loading.gif" lazyload /></p>
-<h1 id="文件描述符">文件描述符</h1>
-<p>PCB（进程控制块）的本质是一个结构体，其中一个成员是文件描述符表。</p>
-<p>文件描述符是指向一个文件结构体的指针。</p>
-<p>文件描述符：0/1/2/3/4....../1023 ，一个进程只能打开1024个文件。</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220130063850652.png" srcset="/img/loading.gif" lazyload /></p>
-<h1 id="阻塞和非阻塞">阻塞和非阻塞</h1>
-<p>只需要了解阻塞和非阻塞的概念即可。</p>
-<p>产生阻塞的场景： 读设备文件、读网络文件。</p>
-<p>（阻塞是设备文件、网络文件的属性，读常规文件无阻塞概念）</p>
-<p><strong>例：</strong></p>
-<p>从标准输入读，写到标准输出：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220130065720761.png" srcset="/img/loading.gif" lazyload /></p>
-<p>执行程序，就会发现程序在阻塞等待输入：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220130065818413.png" srcset="/img/loading.gif" lazyload /></p>
-<p>下面是一段更改非阻塞读取终端的代码：（要求能看懂）</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220130072902372.png" srcset="/img/loading.gif" lazyload /></p>
-<h1 id="fcntl函数">fcntl函数</h1>
-<ul>
-<li><p>函数定义</p>
-<p><code>fcntl</code> 用来改变一个【已经打开】的文件的 访问控制属性。</p>
-<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;fcntl.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">fcntl</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">int</span> cmd, ... <span class="hljs-comment">/* arg */</span> )</span></span>;<br></code></pre></div></td></tr></table></figure></li>
-<li><p>参数</p>
-<ul>
-<li><p>fd：文件描述符</p></li>
-<li><p>cmd：命令，决定了后续参数个数</p>
-<p>重点掌握两个参数的使用：</p>
-<p><code>F_GETFL</code>：获取文件状态</p>
-<p><code>F_SETFL</code>：设置文件状态</p></li>
-</ul></li>
-</ul>
+              <p>本文顺序对应视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yJ411S7r6?p=3">Linux系统编程（李慧琴）_哔哩哔哩_bilibili</a></p>
+<h1 id="section"></h1>
 
             </div>
             <hr>
