@@ -20,21 +20,21 @@
   
     <meta name="description" content="b站视频学习笔记！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux系统编程-基本命令">
-<meta property="og:url" content="http://zengyq.cn/2022/01/28/linux%E7%BC%96%E7%A8%8B/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="Linux系统编程1-基本命令">
+<meta property="og:url" content="http://zengyq.cn/2022/01/28/linux%E7%BC%96%E7%A8%8B/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B1-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="如此肤浅">
 <meta property="og:description" content="b站视频学习笔记！">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220114140830.png">
 <meta property="article:published_time" content="2022-01-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-03T06:21:19.224Z">
+<meta property="article:modified_time" content="2022-02-05T14:56:47.539Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220114140830.png">
   
   
-  <title>Linux系统编程-基本命令 - 如此肤浅</title>
+  <title>Linux系统编程1-基本命令 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Linux系统编程-基本命令">
+            <span class="h2" id="subtitle" title="Linux系统编程1-基本命令">
               
             </span>
 
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      9.1k 字
+      8.8k 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      77 分钟
+      74 分钟
     </span>
   
 
@@ -285,7 +285,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Linux系统编程-基本命令</h1>
+            <h1 style="display: none">Linux系统编程1-基本命令</h1>
             
             <div class="markdown-body">
               <p>本文顺序对应视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KE411q7ee?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click">黑马程序员-Linux系统编程_哔哩哔哩_bilibili</a></p>
@@ -479,7 +479,7 @@
 <p>​ ② Debian 系列：Debian、Ubuntu 等</p>
 <p>​ 包管理工具是 apt-get</p>
 <ul>
-<li><p>yum 安装</p>
+<li><p>apt 安装</p>
 <p>​ 自动解决依赖关系；可以对rpm进行分组，基于组进行安装操作；引入仓库概念，支持多个仓库；配置简单</p>
 <ul>
 <li><p>卸载</p>
@@ -490,28 +490,29 @@
 <li><p><code>apt-get</code> 安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 该安装方式需要root权限，故加上sudo</span><br>sudo apt-get install 软件名称<br></code></pre></div></td></tr></table></figure></li>
 <li><p><code>deb</code> 软件包安装（类似于windows下的.exe文件）</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">       sudo apt -i xxx.deb<br>       <br><span class="hljs-comment"># 注：</span><br>       <span class="hljs-comment"># ① apt和apt-get的区别：</span><br><span class="hljs-comment"># apt命令包含了apt-get，一般用apt；</span><br>       <span class="hljs-comment"># apt是advanced package tool 高级包工具；</span><br><span class="hljs-comment"># apt install xxx 是在线安装，能够自动检查解决依赖问题。</span><br>       <br><span class="hljs-comment"># ② dpka</span><br>       <span class="hljs-comment"># dpka是debian package的管理器，</span><br><span class="hljs-comment"># dpkg -i xxx.deb 只能够本地安装deb安装包，不能解决依赖问题。</span><br>       <span class="hljs-comment"># 当安装过程中出现包依赖未安装的问题，可以通过</span><br><span class="hljs-comment"># apt --fix-broken install 命令解决依赖问题，</span><br>       <span class="hljs-comment"># 再次dpkg -i xxx.deb 一般都能解决问题。</span><br></code></pre></div></td></tr></table></figure></li>
-</ol></li>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt -i xxx.deb<br></code></pre></div></td></tr></table></figure></li>
+</ol>
+<p>注：</p>
+<ol type="1">
+<li><p>apt和apt-get的区别：</p>
+<p>apt命令包含了apt-get，一般用apt；</p>
+<p>apt是advanced package tool 高级包工具；</p>
+<p>apt install xxx 是在线安装，能够自动检查解决依赖问题。</p></li>
+<li><p>dpka：</p>
+<p>dpka是debian package的管理器，</p>
+<p>dpkg -i xxx.deb 只能够本地安装deb安装包，不能解决依赖问题。</p>
+<p>当安装过程中出现包依赖未安装的问题，可以通过 <code>apt --fix-broken install</code> 命令解决依赖问题，再次dpkg -i xxx.deb 一般都能解决问题。</p></li>
+</ol>
+<p><strong>以QQ音乐为例</strong></p>
+<p>下载deb安装包：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203120331485.png" srcset="/img/loading.gif" lazyload /></p>
+<p>找到软件包：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203120556683.png" srcset="/img/loading.gif" lazyload /></p>
+<p>输入安装命令：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203120650499.png" srcset="/img/loading.gif" lazyload /></p></li>
 </ul></li>
 </ul>
-<p><strong>以QQ音乐为例</strong></p>
-<div class="hljs code-wrapper"><pre><code class="hljs">   下载deb安装包：
-   
-   ![](https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203120331485.png)
-   
-   找到软件包：
-   
-   ![](https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203120556683.png)
-   
-   输入安装命令：
-   
-   ![](https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203120650499.png)
-   
-   </code></pre></div>
 <h1 id="压缩解压命令">压缩、解压命令</h1>
-<p>linux 特有的压缩方式。</p>
-<ul>
-<li><p>压缩</p>
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">tar zcvf 要生成的压缩包名 压缩材料<br></code></pre></div></td></tr></table></figure>
 <ol type="1">
 <li><p>压缩包一般使用 .tar.gz 结尾</p></li>
@@ -521,10 +522,11 @@
 <p>v：vision，显示压缩过程，可以去掉，直接用 zcf，但这样不显示压缩过程</p>
 <p>f：file，文件</p></li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 两种方式</span><br>tar zcvf test.tar.gz file1 dir2	<span class="hljs-comment"># 使用 gzip 方式压缩</span><br>tar jcvf test.tar.gz file1 dir2	<span class="hljs-comment"># 使用 bzip2 方式压缩</span><br></code></pre></div></td></tr></table></figure>
+<p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 两种方式</span><br>tar zcvf test.tar.gz file1 dir2	<span class="hljs-comment"># 使用 gzip 方式压缩</span><br>tar jcvf test.tar.gz file1 dir2	<span class="hljs-comment"># 使用 bzip2 方式压缩</span><br></code></pre></div></td></tr></table></figure></p>
 <figure>
 <img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220118193541640.png" srcset="/img/loading.gif" lazyload alt="image-20220118193541640" /><figcaption aria-hidden="true">image-20220118193541640</figcaption>
-</figure></li>
+</figure>
+<ul>
 <li><p>解压</p>
 <p>将压缩命令中的 c 替换成 x</p>
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">tar zxvf 压缩包名<br><br><span class="hljs-comment">#对应上面的两种方式</span><br>tar zxvf test.tar.gz	<span class="hljs-comment"># 使用 gzip 方式解压</span><br>tar jxvf test.tar.gz	<span class="hljs-comment"># 使用 bzip2 方式解压</span><br></code></pre></div></td></tr></table></figure></li>
@@ -957,9 +959,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/01/30/linux%E7%BC%96%E7%A8%8B/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E6%96%87%E4%BB%B6IO/">
+                      <a href="/2022/02/03/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E5%8A%A0%E8%BD%BD%E4%B8%8D%E4%BA%86/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Linux系统编程-文件IO</span>
+                        <span class="hidden-mobile">软件中心加载不了软件</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

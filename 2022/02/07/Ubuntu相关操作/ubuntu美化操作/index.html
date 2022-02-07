@@ -18,23 +18,23 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="内容来源于网络">
+    <meta name="description" content="内容收集自网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu20.04软件中心加载不了软件">
-<meta property="og:url" content="http://zengyq.cn/2021/02/03/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/Ubuntu20.04%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E5%8A%A0%E8%BD%BD%E4%B8%8D%E4%BA%86/index.html">
+<meta property="og:title" content="ubuntu美化操作">
+<meta property="og:url" content="http://zengyq.cn/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E7%BE%8E%E5%8C%96%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="内容来源于网络">
+<meta property="og:description" content="内容收集自网络">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
-<meta property="article:published_time" content="2021-02-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-03T06:47:48.719Z">
+<meta property="article:published_time" content="2022-02-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-07T00:35:33.688Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
   
   
-  <title>Ubuntu20.04软件中心加载不了软件 - 如此肤浅</title>
+  <title>ubuntu美化操作 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Ubuntu20.04软件中心加载不了软件">
+            <span class="h2" id="subtitle" title="ubuntu美化操作">
               
             </span>
 
@@ -236,8 +236,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-02-03 00:00" pubdate>
-        2021年2月3日 凌晨
+      <time datetime="2022-02-07 00:00" pubdate>
+        2022年2月7日 凌晨
       </time>
     </span>
   
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      453 字
+      567 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      5 分钟
     </span>
   
 
@@ -285,43 +285,34 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Ubuntu20.04软件中心加载不了软件</h1>
+            <h1 style="display: none">ubuntu美化操作</h1>
             
             <div class="markdown-body">
-              <ul>
-<li><p>执行下面三条命令即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt install ubuntu-software<br><br><span class="hljs-comment"># 删除原来的snap商店</span><br>sudo snap remove snap-stroe	<br><br><span class="hljs-comment"># 会同时清除软件包和软件的配置文件，</span><br><span class="hljs-comment"># 删除已安装的软件包（不保留配置问题），同时删除相应的依赖软件包。</span><br><span class="hljs-comment"># apt-get purge</span><br>sudo apt purge snapd	<br></code></pre></div></td></tr></table></figure></li>
-<li><p>在执行 sudo apt install 时可能会报错</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203111111176.png" srcset="/img/loading.gif" lazyload /></p>
-<blockquote>
-<p>正在等待缓存锁：无法获得锁 /var/lib/dpkg/lock。锁正由进程 3945（unattended-upgr）持有... 5秒</p>
-</blockquote>
-<p>解决方案：</p>
-<p>强制解锁，命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo rm /var/chche/apt/archives/lock<br>sudo rm /var/lib/dpkg/lock<br></code></pre></div></td></tr></table></figure>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203111154912.png" srcset="/img/loading.gif" lazyload /></p>
-<p>应用商店就出来啦~</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203111718018.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>该软件商店基本找不到想要的软件，因此可以通过<a target="_blank" rel="noopener" href="https://spark-app.store/download.html">星火应用商店</a>来安装</p>
-<ol type="1">
-<li><p>下载需要的依赖</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203141430168.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>在解压后的目录中打开终端</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203141533427.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>安装所有的.deb文件</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203142341076.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>下载星火应用商店</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203142459908.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>执行命令安装</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203142835764.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>打开商店，手动更新一下源</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203143627900.png" srcset="/img/loading.gif" lazyload /></p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203143726046.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>安装微软核心字体</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220203144504110.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>下面就可以安装自己想要的软件了</p>
-<p>......</p></li>
-</ol></li>
+              <h1 id="鼠标滚轮速度">鼠标滚轮速度</h1>
+<p><code>ubuntu</code> 自带的设置里只有调鼠标速度的功能，没有调鼠标滚轮速度的功能，需要安装 <code>imwheel</code> 软件来实现。</p>
+<ul>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt install imwheel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>查看安装位置</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">whereis imwheel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo gedit ~/.imwheelrc<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-string">&quot;.*&quot;</span><br>None,      Up,   Button4, 3<br>None,      Down, Button5, 3<br>Control_L, Up,   Control_L|Button4<br>Control_L, Down, Control_L|Button5<br>Shift_L,   Up,   Shift_L|Button4<br>Shift_L,   Down, Shift_L|Button5<br></code></pre></div></td></tr></table></figure>
+<p>第一行的 <code>.*</code> 代表对所有应用生效；</p>
+<p>第二行和第三行的 3 代表一次滚动的行数；</p>
+<p>第四行和第五行可以让鼠标支持 <code>Ctrl+上下</code> 滚动，对应功能应用支持才可以；</p>
+<p>第六行和第七行可以让鼠标支持 <code>Shift+上下</code> 滚动，对应功能应用支持才可以。</p></li>
+<li><p>查看进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">ps -ef | grep imwheel<br></code></pre></div></td></tr></table></figure>
+<p>启动之前确保所有 <code>imwheel</code> 是结束的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo killall imwheel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">imwheel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>开机启动</p>
+<p>利用 <code>gnome-session-properties</code> 命令添加自启命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gnome-session-properties<br></code></pre></div></td></tr></table></figure>
+<p>在弹出的 gui 页面中添加自定义命令即可，如图：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207083435405.png" srcset="/img/loading.gif" lazyload /></p></li>
 </ul>
 
             </div>
@@ -357,15 +348,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/03/10/%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">原生安卓开发</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/02/06/linux%E7%BC%96%E7%A8%8B/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B2-IO%E6%93%8D%E4%BD%9C/">
+                        <span class="hidden-mobile">Linux系统编程2-IO操作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

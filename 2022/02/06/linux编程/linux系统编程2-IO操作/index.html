@@ -20,21 +20,21 @@
   
     <meta name="description" content="b站视频学习笔记！寒假龟速学习中，将持续更新~">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux系统编程-文件IO">
-<meta property="og:url" content="http://zengyq.cn/2022/01/30/linux%E7%BC%96%E7%A8%8B/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E6%96%87%E4%BB%B6IO/index.html">
+<meta property="og:title" content="Linux系统编程2-IO操作">
+<meta property="og:url" content="http://zengyq.cn/2022/02/06/linux%E7%BC%96%E7%A8%8B/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B2-IO%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="如此肤浅">
 <meta property="og:description" content="b站视频学习笔记！寒假龟速学习中，将持续更新~">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220128165013.png">
-<meta property="article:published_time" content="2022-01-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-03T07:59:28.722Z">
+<meta property="article:published_time" content="2022-02-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-06T03:01:35.220Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220128165013.png">
   
   
-  <title>Linux系统编程-文件IO - 如此肤浅</title>
+  <title>Linux系统编程2-IO操作 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Linux系统编程-文件IO">
+            <span class="h2" id="subtitle" title="Linux系统编程2-IO操作">
               
             </span>
 
@@ -236,8 +236,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-01-30 00:00" pubdate>
-        2022年1月30日 凌晨
+      <time datetime="2022-02-06 00:00" pubdate>
+        2022年2月6日 凌晨
       </time>
     </span>
   
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      36 字
+      1.6k 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      14 分钟
     </span>
   
 
@@ -285,11 +285,56 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Linux系统编程-文件IO</h1>
+            <h1 style="display: none">Linux系统编程2-IO操作</h1>
             
             <div class="markdown-body">
               <p>本文顺序对应视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yJ411S7r6?p=3">Linux系统编程（李慧琴）_哔哩哔哩_bilibili</a></p>
-<h1 id="section"></h1>
+<h1 id="io介绍">I/O介绍</h1>
+<p>I/O（intput &amp; output）：</p>
+<ul>
+<li>stdio 标准I/O</li>
+<li>sysio 系统I/O（文件I/O）</li>
+</ul>
+<p>若在某个环境下两个I/O都能用，优先使用标准I/O。</p>
+<h1 id="stdio">stdio</h1>
+<h2 id="fopen与fclose">fopen与fclose</h2>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-comment">// 需要包含的头文件</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-comment">//mode：文件打开方式（r\r+\w\w+\a\a+）</span><br><span class="hljs-function">FILE *<span class="hljs-title">fopen</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *pathname, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *mode)</span></span>;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">fclose</span><span class="hljs-params">(FILE *stream)</span></span>;<br></code></pre></div></td></tr></table></figure>
+<p>例：</p>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;errno.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    FILE *fp;<br>    fp = fopen(<span class="hljs-string">&quot;tmp&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>);<br>    <span class="hljs-keyword">if</span>(fp == <span class="hljs-literal">NULL</span>)&#123;<br>        <span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;fopen() failed! errno = %d\n&quot;</span>, errno);<br>        <span class="hljs-comment">// 使用 perror 输出错误信息</span><br>        <span class="hljs-comment">// perror(&quot;fopen()&quot;);</span><br>        <br>        <span class="hljs-comment">//使用 strerror 输出错误信息</span><br>		<span class="hljs-built_in">fprintf</span>(<span class="hljs-built_in">stderr</span>, <span class="hljs-string">&quot;fopen():%s\n&quot;</span>, strerror(errno));<br>        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);<br>    &#125;<br>    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;OK!&quot;</span>);<br>    fclose(fp);<br>    <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);<br>&#125;<br><br></code></pre></div></td></tr></table></figure>
+<p>由于没有 <code>tmp</code> 文件，在 make 后会输出所对应的错误类型编号 <code>errno</code>：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220206075622015.png" srcset="/img/loading.gif" lazyload /></p>
+<p>在输入如下命令后可查看该编号对应的错误类型：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">vi /usr/include/asm-generic/errno-base.h<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220206075722814.png" srcset="/img/loading.gif" lazyload /></p>
+<p>该方式需要单独去查文档，很麻烦。因此使用下面两个函数输出错误信息：</p>
+<p><code>perror()</code> 、<code>strerror(errno)</code>，结果都如下图所示：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220206080410150.png" srcset="/img/loading.gif" lazyload /></p>
+<ul>
+<li><p>一个进程空间里面使用 <code>fopen</code> 打开文件的上限是多少呢？</p>
+<p>用一个循环进行测试：</p>
+<figure class="highlight c"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;errno.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br>    FILE *fp = <span class="hljs-literal">NULL</span>;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)&#123;<br>        fp = fopen(<span class="hljs-string">&quot;tmp&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>);<br>        <span class="hljs-keyword">if</span>(fp == <span class="hljs-literal">NULL</span>)&#123;<br>            perror(<span class="hljs-string">&quot;fopen()&quot;</span>);<br>            <span class="hljs-keyword">break</span>;<br>         &#125;<br>        count++;<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;count = %d\n&quot;</span>, count);<br>    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;OK!&quot;</span>);<br>    fclose(fp);<br>    <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);<br>&#125;<br></code></pre></div></td></tr></table></figure>
+<p>结果如下：</p>
+<p><strong>显示最多能打开1021个文件，实际上不是！</strong>一个进程产生的时候默认打开了3个流（标准输入、标准输出、标准出错），接下来进行文件打开的时候实际上也是进行 <code>stream</code> 的操作，因此最多能打开 <code>1021+3=1024</code> 个文件。</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220206103925542.png" srcset="/img/loading.gif" lazyload /></p>
+<p>可以通过如下命令来查看相关的系统限制信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># -a 参数代表“查询所有的”</span><br><span class="hljs-built_in">ulimit</span> -a<br></code></pre></div></td></tr></table></figure>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220206104404665.png" srcset="/img/loading.gif" lazyload /></p></li>
+<li><p>新创建文件的权限</p>
+<p>文件的权限是根据 <code>0666 &amp; ~umask</code> 计算得到的。</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220206105021280.png" srcset="/img/loading.gif" lazyload /></p></li>
+</ul>
+<h2 id="fgetc">fgetc();</h2>
+<h2 id="fputc">fputc();</h2>
+<h2 id="fgets">fgets();</h2>
+<h2 id="gputs">gputs();</h2>
+<h2 id="fread">fread();</h2>
+<h2 id="fwrite">fwrite();</h2>
+<h2 id="printf">printf();</h2>
+<h2 id="scanf">scanf();</h2>
+<h2 id="fseek">fseek();</h2>
+<h2 id="ftell">ftell();</h2>
+<h2 id="rewind">rewind();</h2>
+<h2 id="fflush">fflush();</h2>
 
             </div>
             <hr>
@@ -324,12 +369,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E7%BE%8E%E5%8C%96%E6%93%8D%E4%BD%9C/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ubuntu美化操作</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/01/28/linux%E7%BC%96%E7%A8%8B/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
-                        <span class="hidden-mobile">Linux系统编程-基本命令</span>
+                      <a href="/2022/02/05/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/vim%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/">
+                        <span class="hidden-mobile">vim相关配置操作</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
