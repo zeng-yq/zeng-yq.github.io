@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220114140830.png">
 <meta property="article:published_time" content="2022-01-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-05T14:56:47.539Z">
+<meta property="article:modified_time" content="2022-02-14T12:22:00.707Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -490,7 +490,7 @@
 <li><p><code>apt-get</code> 安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 该安装方式需要root权限，故加上sudo</span><br>sudo apt-get install 软件名称<br></code></pre></div></td></tr></table></figure></li>
 <li><p><code>deb</code> 软件包安装（类似于windows下的.exe文件）</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt -i xxx.deb<br></code></pre></div></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo dpkg -i xxx.deb<br></code></pre></div></td></tr></table></figure></li>
 </ol>
 <p>注：</p>
 <ol type="1">
@@ -501,7 +501,7 @@
 <li><p>dpka：</p>
 <p>dpka是debian package的管理器，</p>
 <p>dpkg -i xxx.deb 只能够本地安装deb安装包，不能解决依赖问题。</p>
-<p>当安装过程中出现包依赖未安装的问题，可以通过 <code>apt --fix-broken install</code> 命令解决依赖问题，再次dpkg -i xxx.deb 一般都能解决问题。</p></li>
+<p>当安装过程中出现包依赖未安装的问题，可以通过 <code>sudo apt-get install -f -y</code> 命令解决依赖问题，再次dpkg -i xxx.deb 一般都能解决问题。</p></li>
 </ol>
 <p><strong>以QQ音乐为例</strong></p>
 <p>下载deb安装包：</p>
