@@ -20,21 +20,21 @@
   
     <meta name="description" content="内容收集自网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu配置操作">
-<meta property="og:url" content="http://zengyq.cn/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E7%BE%8E%E5%8C%96%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="ubuntu利用gnome美化界面">
+<meta property="og:url" content="http://zengyq.cn/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E5%88%A9%E7%94%A8gnome%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2/index.html">
 <meta property="og:site_name" content="如此肤浅">
 <meta property="og:description" content="内容收集自网络">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
 <meta property="article:published_time" content="2022-02-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-07T13:48:13.150Z">
+<meta property="article:modified_time" content="2022-02-26T07:12:01.895Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
   
   
-  <title>ubuntu配置操作 - 如此肤浅</title>
+  <title>ubuntu利用gnome美化界面 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="ubuntu配置操作">
+            <span class="h2" id="subtitle" title="ubuntu利用gnome美化界面">
               
             </span>
 
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.2k 字
+      1.5k 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10 分钟
+      13 分钟
     </span>
   
 
@@ -285,73 +285,14 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ubuntu配置操作</h1>
+            <h1 style="display: none">ubuntu利用gnome美化界面</h1>
             
             <div class="markdown-body">
-              <h1 id="鼠标滚轮速度">鼠标滚轮速度</h1>
-<p><code>ubuntu</code> 自带的设置里只有调鼠标速度的功能，没有调鼠标滚轮速度的功能，需要安装 <code>imwheel</code> 软件来实现。</p>
-<ul>
-<li><p>安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt install imwheel<br></code></pre></div></td></tr></table></figure></li>
-<li><p>查看安装位置</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">whereis imwheel<br></code></pre></div></td></tr></table></figure></li>
-<li><p>配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo gedit ~/.imwheelrc<br></code></pre></div></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-string">&quot;.*&quot;</span><br>None,      Up,   Button4, 3<br>None,      Down, Button5, 3<br>Control_L, Up,   Control_L|Button4<br>Control_L, Down, Control_L|Button5<br>Shift_L,   Up,   Shift_L|Button4<br>Shift_L,   Down, Shift_L|Button5<br></code></pre></div></td></tr></table></figure>
-<p>第一行的 <code>.*</code> 代表对所有应用生效；</p>
-<p>第二行和第三行的 3 代表一次滚动的行数；</p>
-<p>第四行和第五行可以让鼠标支持 <code>Ctrl+上下</code> 滚动，对应功能应用支持才可以；</p>
-<p>第六行和第七行可以让鼠标支持 <code>Shift+上下</code> 滚动，对应功能应用支持才可以。</p></li>
-<li><p>查看进程</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">ps -ef | grep imwheel<br></code></pre></div></td></tr></table></figure>
-<p>启动之前确保所有 <code>imwheel</code> 是结束的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo killall imwheel<br></code></pre></div></td></tr></table></figure></li>
-<li><p>启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">imwheel<br></code></pre></div></td></tr></table></figure></li>
-<li><p>开机启动</p>
-<p>利用 <code>gnome-session-properties</code> 命令添加自启命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gnome-session-properties<br></code></pre></div></td></tr></table></figure>
-<p>在弹出的 gui 页面中添加自定义命令即可，如图：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207083435405.png" srcset="/img/loading.gif" lazyload /></p></li>
-</ul>
-<h1 id="桌面美化">桌面美化</h1>
+              <h1 id="桌面美化">桌面美化</h1>
 <ul>
 <li><p>安装美化工具</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt update<br>sudo apt install gnome-tweak-tool <br>sudo apt install gnome-shell-extensions<br></code></pre></div></td></tr></table></figure></li>
-<li><p>下载美化主题（Theme）</p>
-<ol type="1">
-<li><p>进入该<a target="_blank" rel="noopener" href="https://www.opendesktop.org/s/Gnome/p/1357889/">地址</a>进行下载</p></li>
-<li><p>点击右方的Download</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207213348367.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>这里列出了很多不同颜色的，这里先任选一个下载。</p></li>
-</ol></li>
-<li><p>下载美化图标（Icon）</p>
-<ol type="1">
-<li>点开<a href="https://link.zhihu.com/?target=https%3A//www.pling.com/p/1279924/">图标下载地址</a></li>
-<li>点开右方的Download</li>
-<li>同主题一样，先任意选一个下载</li>
-</ol></li>
-<li><p>解压主题和图标</p>
-<ol type="1">
-<li><p>在Home文件夹里创建 <code>.themes</code> 和 <code>.icons</code> 文件夹，注意这里有个点，表示是隐藏文件夹（显示隐藏文件夹：<code>Ctrl+H</code>）</p></li>
-<li><p>把 <code>Orchis-dark.tar.xz</code> 解压到刚才创建的 Home 文件夹里的 <code>.themes</code> 文件夹里 把 <code>Tela-black.tar.xz</code> 解压到刚才创建的 Home 文件夹里的 <code>.icons</code> 文件夹里</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207213746374.png" srcset="/img/loading.gif" lazyload /></p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207213803274.png" srcset="/img/loading.gif" lazyload /></p></li>
-</ol></li>
-<li><p>设置主题和图标</p>
-<ol type="1">
-<li><p>刷新下：<code>Alt+F2</code>，输入 <code>r</code> ，按回车</p>
-<p>（这一步是为了刷新 <code>tweak</code> 里的扩展 ）</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207214012977.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>在应用列表里面搜索 <code>tweak</code>，也就是前面下载的 <code>gnome-tweak-tool</code></p></li>
-<li><p>在扩展中打开 <code>User themes</code> 之后，再刷新一下</p>
-<p>（这次刷新时为了刷新 <code>appearance</code> 里的选项列表）</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207214219312.png" srcset="/img/loading.gif" lazyload /></p></li>
-<li><p>下面就可以设置成刚刚下载的主题了</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207214421037.png" srcset="/img/loading.gif" lazyload /></p>
-<p>注：如果列表里没有我们下载的选项，尝试重新打开<code>tweaks</code> 并且刷新，并检查你的 <code>.icons</code> 和 <code>.themes</code> 文件夹命名正确并且在Home文件夹里，文件是否压缩在正确的文件夹。</p></li>
-</ol></li>
-<li><p>重复以上操作在<a target="_blank" rel="noopener" href="https://www.opendesktop.org/s/Gnome/browse?ord=rating">专门的主题网站</a>，下载别的图标和主题。</p></li>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt update<br>sudo apt install gnome-tweak-tool <br>sudo apt install gnome-shell-extensions<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">  <br>- 下载美化主题（Theme）<br><br>  <span class="hljs-number">1</span>. 进入该[地址](https:<span class="hljs-regexp">//</span>www.opendesktop.org<span class="hljs-regexp">/s/</span>Gnome<span class="hljs-regexp">/p/</span><span class="hljs-number">1357889</span>/)进行下载<br><br>  <span class="hljs-number">2</span>. 点击右方的Download<br><br>     ![](https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/zengyuqin/</span>drawing-bed<span class="hljs-regexp">/raw/m</span>aster<span class="hljs-regexp">/img/im</span>age-<span class="hljs-number">20220207213348367</span>.png)<br><br>  <span class="hljs-number">3</span>. 这里列出了很多不同颜色的，这里先任选一个下载。<br><br>- 下载美化图标（Icon）<br>  <span class="hljs-number">1</span>. 点开[图标下载地址](https:<span class="hljs-regexp">//</span>link.zhihu.com<span class="hljs-regexp">/?target=https%3A/</span><span class="hljs-regexp">/www.pling.com/</span>p<span class="hljs-regexp">/1279924/</span>)<br>  <span class="hljs-number">2</span>. 点开右方的Download<br>  <span class="hljs-number">3</span>. 同主题一样，先任意选一个下载<br><br>- 解压主题和图标<br><br>  <span class="hljs-number">1</span>. 在Home文件夹里创建 `.themes` 和 `.icons` 文件夹，注意这里有个点，表示是隐藏文件夹（显示隐藏文件夹：`Ctrl+H`）<br><br>  <span class="hljs-number">2</span>. 把 `Orchis-dark.tar.xz` 解压到刚才创建的 Home 文件夹里的 `.themes` 文件夹里<br>     把 `Tela-black.tar.xz` 解压到刚才创建的 Home 文件夹里的 `.icons` 文件夹里<br><br>     ![](https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/zengyuqin/</span>drawing-bed<span class="hljs-regexp">/raw/m</span>aster<span class="hljs-regexp">/img/im</span>age-<span class="hljs-number">20220207213746374</span>.png)<br><br>     ![](https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/zengyuqin/</span>drawing-bed<span class="hljs-regexp">/raw/m</span>aster<span class="hljs-regexp">/img/im</span>age-<span class="hljs-number">20220207213803274</span>.png)<br><br>- 设置主题和图标<br><br>  <span class="hljs-number">1</span>. 刷新下：`Alt+F2`，输入 `r` ，按回车<br><br>     （这一步是为了刷新 `tweak` 里的扩展 ）<br><br>     ![](https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/zengyuqin/</span>drawing-bed<span class="hljs-regexp">/raw/m</span>aster<span class="hljs-regexp">/img/im</span>age-<span class="hljs-number">20220207214012977</span>.png)<br><br>  <span class="hljs-number">2</span>. 在应用列表里面搜索 `tweak`，也就是前面下载的 `gnome-tweak-tool`<br><br>  <span class="hljs-number">3</span>. 在扩展中打开 `User themes` 之后，再刷新一下<br><br>     （这次刷新时为了刷新 `appearance` 里的选项列表）<br><br>     ![](https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/zengyuqin/</span>drawing-bed<span class="hljs-regexp">/raw/m</span>aster<span class="hljs-regexp">/img/im</span>age-<span class="hljs-number">20220207214219312</span>.png)<br><br>  <span class="hljs-number">4</span>. 下面就可以设置成刚刚下载的主题了<br><br>     ![](https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/zengyuqin/</span>drawing-bed<span class="hljs-regexp">/raw/m</span>aster<span class="hljs-regexp">/img/im</span>age-<span class="hljs-number">20220207214421037</span>.png)<br><br>     注：如果列表里没有我们下载的选项，尝试重新打开`tweaks` 并且刷新，并检查你的 `.icons` 和 `.themes` 文件夹命名正确并且在Home文件夹里，文件是否压缩在正确的文件夹。<br><br>- 重复以上操作在[专门的主题网站](https:<span class="hljs-regexp">//</span>www.opendesktop.org<span class="hljs-regexp">/s/</span>Gnome/browse?ord=rating)，下载别的图标和主题。<br><br><br></code></pre></div></td></tr></table></figure></li>
 </ul>
 
             </div>
@@ -387,9 +328,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/02/10/%E7%94%9F%E6%B4%BB/2022-02-10_%E5%AE%B6%E9%87%8C%E5%90%B5%E6%9E%B6/">
+                      <a href="/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E9%80%9F%E5%BA%A6/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2022-02-10 家里又吵架</span>
+                        <span class="hidden-mobile">ubuntu修改鼠标滚轮速度</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

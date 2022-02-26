@@ -18,23 +18,22 @@
   <meta name="author" content="zeng-yq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="内容收集自网络">
+    <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim相关配置操作">
-<meta property="og:url" content="http://zengyq.cn/2022/02/05/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/vim%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="2022-02-10 家庭琐事">
+<meta property="og:url" content="http://zengyq.cn/2022/02/10/%E7%94%9F%E6%B4%BB/2022-02-10_%E5%AE%B6%E5%BA%AD%E7%90%90%E4%BA%8B/index.html">
 <meta property="og:site_name" content="如此肤浅">
-<meta property="og:description" content="内容收集自网络">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
-<meta property="article:published_time" content="2022-02-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-12T13:19:39.529Z">
+<meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/楼顶野草.jpg">
+<meta property="article:published_time" content="2022-02-10T11:40:57.432Z">
+<meta property="article:modified_time" content="2022-02-26T07:08:37.661Z">
 <meta property="article:author" content="zeng-yq">
-<meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
+<meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/楼顶野草.jpg">
   
   
-  <title>vim相关配置操作 - 如此肤浅</title>
+  <title>2022-02-10 家庭琐事 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,7 +225,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="vim相关配置操作">
+            <span class="h2" id="subtitle" title="2022-02-10 家庭琐事">
               
             </span>
 
@@ -236,8 +235,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-05 00:00" pubdate>
-        2022年2月5日 凌晨
+      <time datetime="2022-02-10 19:40" pubdate>
+        2022年2月10日 晚上
       </time>
     </span>
   
@@ -247,7 +246,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      395 字
+      1.7k 字
     </span>
   
 
@@ -256,7 +255,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      14 分钟
     </span>
   
 
@@ -285,23 +284,21 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">vim相关配置操作</h1>
+            <h1 style="display: none">2022-02-10 家庭琐事</h1>
             
             <div class="markdown-body">
-              <h1 id="vim下按上下左右建时输入abcd">vim下按上下左右建时输入ABCD</h1>
-<p><code>ubuntu</code> 系统自带的 vi 不完整导致，解决方法：安装完整的vi：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install vim-gtk<br></code></pre></div></td></tr></table></figure>
-<h1 id="man手册">man手册</h1>
-<p><code>ubuntu</code> 默认是没有完全安装 man 手册的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install manpages-de  manpages-de-dev manpages-dev glibc-doc manpages-posix-dev manpages-posix<br></code></pre></div></td></tr></table></figure>
-<p>如果为了显示中文手册，下载manpages-zh包，可以直接运行如下命令安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install  manpages-zh<br><span class="hljs-comment"># 卸载</span><br>sudo apt-get --purge remove manpages-zh<br></code></pre></div></td></tr></table></figure>
-<h1 id="vim下tab键空格数默认为8">vim下tab键空格数默认为8</h1>
-<p>修改配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo vim /etc/vim/vimrc<br></code></pre></div></td></tr></table></figure>
-<p>添加如下3行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> ts=4<br><span class="hljs-built_in">set</span> expandtab<br><span class="hljs-built_in">set</span> autoindent<br></code></pre></div></td></tr></table></figure>
-
+              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e94aaf04d743e4390e8d0cacf9894b8df3f9f3e5f7ba31126e7934f1f70b41f9">0795a763a3ebe5c5f2689de868fdd58d5ac61fb22b8968948148abe609cf8359d863c23e0dc7a65ae0a0f5a579e3b526e3bd0401ec2a9fae07636d713468be0d5ed828d33eb8e8d62f109dc9db378ebb03ef621eebb712a208e7285f73559eb3a76d2c3414b341b618ea37b83f411a836f08c3e498988495aca0297a4b0d43661c4e62515bd499c39b75566b3d0e38e7802884a7b2b516b41fac8dc90e8e5a9056b1ec75ed75b55c5cc65fb6884367ba089f521f2da8d3ad64910c60f3d2d2942e69940adaaa636e26ce4a55484ab00de27512db5e88dddc98e3b1437592ce683f71c4eae7517b68b8aa6b7f4325510da1e3cafa73550048b1c31e14d4b4f08a1b2938892be870935776aa6aaab8d7d243e40545d7460993912f7981246c952da4767e29afe3c3093d0b71f35d3d29dfc232a753929464565fa251efe3064d452fb0f5227484de91a891fb58cfa51f7d54399172aeb46bfae06ee9e47ec82cbc8b60f7b7c38280905bdfa04c51eccb089c49639d6087f94276bd43ef11d70ec34321527f9aa41753776fac1d26760471c79a06a116f7d9d7b15f915bf809727f688b832bc846906b58a5d7ccfa5b86033941656d4ca555a814c02233fef674ba30e3e195bc1d2082e5086771b673e1687c70b888da41b299aa71d36e99d4af556a31c4a4bdaaa8fa9163610504ea127b897e086c65c7177fec9236ee05c5bd2ef9d0813b99cdd3ae458e34f6429b935f5f99a89b2b4eb56eb955bff351ffb7431f432350b7476b63b858141917c766bb29648493ab32af43700ac6cbfc71cadc395b7d14b291252477ac6e17863cd6fc3f2941c1672932ef28c8243b4076baa13bc46f81a8791f3f3de2f82add4f57779c2c7d4783ce71b9162e620a4fc1c5a1a1bd08d70bc1cd75a2554336c9f27e7792c79b4730b323a47797ce9b87ebb15f535f0f016808aa635fb9735366c22a3c9cfb2ba463124ff9c7a9d1029a4c4f6ac8a9492bd281f65475913a0034e8161464b681ed6a006262b6cc7ae93d93dfdfd341a17c2226afb463cf68555dcceb3dd22c2ff45c0cb7b6de33bd57cc658ea99adff3999514aa7ce8c17ae382f342d382f39cd772b6282c6488cc55e0ddb07cb87f0c827e7680da31ef2f2be5108fe15c41265d87bd2123f01f153b9a5f59dcf4bf95520e03dcf31dda1f22da7ccc59282effe75200b38f50f8b3da162c29c10ebe1c3978537b7d9821e458e86194971a63f8821da1130f242d37ece7d16545eb2109b9f041be508f97ee2300e9ab9636cee0932e2328bdbc1f5f2c79b81590ab1bc987630c108e11dc628b160a377d2b264aaed6a540fec8f356fa5e7c9ecaf133d9d386fec7042646185b4df138fc1bfa3de3d18ca23cb537686a185d0bbd4748345859b7f96312e4f18f4444e9cb6a357ec761fde422ab6e67e5faa0f501421db22c8d70c1a22bd448b6168b51064e9c0ca76412543d9e003a2d0c34bc15b7761619cad70f79b49b2e1c4b901c19914beba9e9906a63927f9f5e915374f90108f10ae6f62310d6e0fe90ccd052eef0e5df3a4427b4a3094e00be6a488bb360876d52fc706aa21fd231b070c5ee5ae3677af80fd35de0c88173ef46bd107a2ced62ed76ad8e01fcc7ca68b67c1658ab234a42ba3f8dbff8e8373b8dc6bf9916053e5923b2e4804105247f46a035a8cae095ee80f217ae4dc4cea5a0060c7e04b83905448c76fad565f9c2751780b8cd8ae8e3ba5244d0088f0face42dc1f9edc3334019e374886b682002d5c0dc1b39ce5d63035c02bf29ee495a1d50734272ecb3ede2649c67e6360f9d5e1e8d5cf89c87896046f7616f27ac0cb7311f8e6afc66de1a4c7bc2a7db7d578758de5eb874003f6e587c348513d80716e390fbb3d5073390c3b1ead1603d159dc57bc7feb2a83888c7158f1e7e2f09f84c07c1f6e85df3f00878505a4e6b6f76f3cdab84d888838e8e87171b4538a71951bbd200f632f5efd7ab64b8ba39325a7eb4cfc4e3b1179a004bb0e86b6994cbf5fdf626359dc622c42f1d8416c01b627fc7bd0fbeb63489152d3ba7774dc7168c82499f14535a21f3bd8f086e08176aa9e23c3d8abd60001e3344b87687b33b0e3d4a8b297b1b480f305f9d8b8d70d3b1f61fdb9ea867409d3986de5d9c50e114031305e53051c21d429910146cc9dd81ce4001a0dc679654726a26cf5915951574382ebf32a487bd4abe2d8a0e6e5041c3057d9e31db2d059966f85f04a8451e1870378ff2777eff11867e50bccc4d53d593b6301333d742e632b70f0ced9ef0a613c17e60642e0526ed703b364c1ea598c3c6e39a5381c00647d7901771c1df451540d421d44325035bdb460046aae6916db3b5ea412d57cfdc616c3a3629395af029d9415b7ae305d947ebe7e41c37835eb34ef50dd535ae7b2dc6d9bc3ea36d3addba2cfb3b88f13b3d405e3d3f1963caf7ae25e8a4af79f014aa4d33dd9da989dae7efad0fce058940be62cd3535aa7e32b8e94562466c06f9e38ac0f63d3b2dcf04454fcf8fe37f83eeb4579ea34b1795c8bd37af1173a126c049cf72f72f8043e074df81b84c178e281c56caa4aaa242d36bd82e2e06a18163b53b96bcfb4038ea106d559e6d54656ea2b5249c76d058171f8d5ec9d1314bf896e37778950a31d323f06e3f8b37c1dd58847a15817a26f5bc7eb437f633a488228c86e9da65f6008f468cadfdb486e252ca9af10901b5d094426fe9339e450184a46dccff40be5ea88a4bd862eeca025428abd1a112563d6e6f40889fad247b5f4e4239b2bb2c05ba7bd522d76600b33e8c2781473578bfbc94a47befee31314f832371f1456de93810043130f33305bcfa0e1d7965563ed8d0ef93365e049d0b894f13bd1760179de85bfb0d85e25b634552d399c5b06f40cbbf59027a81b0dc66eaa92e96a472dd39071f05b6ccdd0fba425bb66f9b2947dbd923aee7c472ab12ea5c730fe525727b613e3a79e3522cab4d3c9ad74925366eb8961972a7b538227b04a4a978edcd0972642851b01de06418646a42cfae41cf2053da6cd509619937121bf7c3484eda91899996cca991e2d49f7c30015e89b0b41ce600f6619acb50739b95a9b2408ac54b878b55e30a2a10c472ae1adecc17432198ce11fba559933943d73087b60c2fe1e40b5be066a762f9d43de61dddf3a0d1077d1a87592eb1ba843d23fd5c6b32080c1567e0c2b35ad7179ff32ae5590b6c84607ba452d39affc22a5ea4d10b2ee542e95092b709dee9ddd43a1941da939c40d5e4a711054b5e8a7f1f4e9f980a9d663cdf1e0f0621f7da007c3c83b9e644e6d29c9f2b11278646401d17541d27f177e2ee11b65e7c449f72a84545767872aa83e2f4c46231e4b798873bfd16f6e7d18277c9bcc92ae989d3d62f2ad08915090e5817ac3b4ff0989d50a5624c145548543cb04b548d2ba628defe6a70346e2d22501bc6a6da392112e2cfc8b80d9a734661121acabcdac7589eb10bdd52aca814d48e32b017a69bdd70fe22305e26b569df5bd9ee7d3ae8a8868ccd9a64b11684c11921e3fc1b92d23f5884b33cd6c55c857803b992b35df7f284cabeb2d0f0d8236e63a424a16d0fb667027acae2b8dda4850fc64fe32fd47aead9308cf21201bbbb5ed59419ecf039ce42fb09105b8a768c88241cb7af5b63dad698c3bea1020372ea88f64db8ecf3489cd42151ac23d0dcc9e051ec24347c948ce2b106d4e27d4a5796d866be1cdcbf29af5c7e73276afcab3b5f5d4d91301871d1e415b0e478583e0a5b017267ca3b98b7511e5a57343f2a2be0fb590d6c2d2da05952d8b3a4d4597e4a0413751b14c09d251b1d0db9490bbd2b8ffc191c2e2ab75f60c18e463b8db45886679a5338ba2887f92d87b01f0ce6c2ddf3229b727e3a07b14176cc6294f58339838b0f1d51fe72759cd74ad0347a12eae8199a6aae831fd29c11407507ec7b711f72fe7d770f81eaaad443ba25deda5ddfab6534d5995ccc348839b1398a0bb7f849821fcb6baeb7c56526600a5165d585943b3bd6229e78a83acb69b91cf5cb59db40baf232fb5c5ebf43202dd7c8bb4e8e07a0e605b0aeac4f23bb59fa4af23653d42bd59ab08bd6f674218b873c6a96dfa1faef2e43b76a1608ad28c832795cda4cfae29a3a56573fae7688875e0d48c6fcbab6b948e3f3418bec4d98da4562237cb18090f9c395d57d40b94368110f46389039b2413fe8f2d546a2cbc976779b753121aa8d7c2b602eae59c497fa1f74783b264604e385a01bb4fb493e29a6ffdcd3a6ac40c78caa9f8d8ea0d21240e6a2f201d6d7833a82e2da5e91a165fc1795666a62538c3f98e31a20d538a1f1200f604f0916e06011492ff99f9e548b1469d0c517f3682ba2f7dda068c9c6efe2fd676c93be049e929b3a97fbdaf30e97f6ab8cf1fb8798b42ba709a1e1ba6ee845cfc6a5dcb77636655170dc912313222afc141320dbca574b9048634f0e309a29edab8deeccf7c4c0dde499405eb575a1e40df7fdf300cdcbb8708cd3eefec4c8f4f5e7c8732da2e72dc056ec5d24b39920d1ae589a3c1f2cd207fbff499d5d42c339773e2911f9ee3436efad6984d0b9b77ad7a904de80d66616989c7cbc0624df08036b8404ee2e36d3532818df55b08e56957f215cf93b4b2e54c12bc66655da23d5a5b434caeb61c80cf27dbc4654c750698e6ad8c4a81f0719dbec90e2f6a9a914661d07cd12b0947bc73f26bba4d75205023d0aff5bbfea29334616049e12c307d3b2500f4e5b906afca8ffa15bd572d88236a99d720a07d046e2e111c45b0b5eec8b85119d43ccf9176c2e1a87daefad6892a2b402e53692251fc45999e31f7aa00c44f1458668f55bf6df0f5fe5413f8e2550c58b960b5e6863c71f9a5c2a9fdbd300afa79144820a54ed8de2a17a5f77a6919df3f4d122d4c923b06f8513f681e021d2b5242f62ca78f224b3b1990bf8a5f201b562e6021af2295d5a15fb9d9927d5af8e3cd40a9de552a826a144f45b8bbb5e9246a22db943e86efaa94c141dd8a16e2975360a89ccaf01c3aebb66b49b364ae563163ddef8b185c553f2ec344e8126fdcec472d46545711cddc918ac3c2cefc3de5e94b60c232525032cf3caccf858e38b056632a9233fd0cd99107d4b6eed85f88d0b3dfa6fb5d5930c7a305b793c943da02191c989c32f823f34f1135c7156a450aa0863bb2fcbe14735f6473757210cb4cea9e28181b43bc3a042f9e89348dbff8fba8f36bc9bb85c19ef83ff54a498d6671310446ca8f87be2e53bc445fb3afab075b84295fa587b148b6e1627806fb7e4a70cc146eefd7d394d6166b689afbd7b846c326ec5a0dbf25fdec0f6b0e83eec7bdf5621f689921a9b163efb1024af27bd5b12aa7bc7c138f02dc2db7480fb4302753530c7f40b32396ee27575c0cd0926827855884fc4719785314f5fbbdab5558835ec0b8bb4ab2c773f074f30ff65187080efe57e8d16ee1e05dbb4e13955617550e6f128d420bc0fb1978df56d5bdaca4a24f290ae5a5035bb99aa87775cac272ffa86ddc2192c03a6d2fe4291b91774b7d9e57aa848bb6ac4f927f4653d1b8591a39d17766f825dfdd1b0b43bbed115863af9512af9d82e7262ab22b5db178599da8913e9592344a79b1c582384359a82ce8ffcc05dcf7e9d9e8e225325d65bb192071423a305595b72b53c02d8f7d03384db1b0e4f5a2b98cb3a8bd112d9a33c337193c395da434b624a8ec4c7c4d5de45cbdc6d38baea8c2f7d661d91a9022b63dd86681c74f0449da493a66d663e148bba2009e443d7774321e2b10125c115a7d60225a198eec3401b67faf79c641fb284ffa56b1aa83d93e6dc2f5ee6ebd92df73639e52d420920e90d7be726b35b5c4a63bf53d9c472e460e7b434fc941e9bada2d0aa4706531fb935fccf82800789a80f016fd98e3ff9173fdd69a677ebca78dc0391da689b44aaee81504df8c363b595c130a7953ff91483520092c404f429d33e2f4e8e2a6cf1db6133ad2d72f64830e3d40e3393513fbac6d1bb87ff61aa2557a986781de2295b60e07a4a5d431eafa871f96e03843991c615917696a8d143f92af997338dc5ee179bcd987e688d0d7d4fc3ae9c0edfb8728da28f72b2532f48a563bc95a18e5de519d8b5e8968df9f81a2c5afb18fee2b52e085f4e3d51144d5c3111fb6cb938f3f4a8ee2bc204c2443002e68206d5f195a9e5b0ebcff19e00800f8627db96ebaacba95de41a9173bfdf249696ac94678d9769aa46733a6cfa1b353269e093c641f0df859f415a3df56e4bb7dd11758bdc8e4c794a7ac77a66fd048f6312c9f1634589af3298faf45cfbe3aeed1d2056ad5a3a8525b11b4d310aef77c701bc549edb3edc35f54d048b9fe4b7c21a44f52bcd8972ff28012679be61c28f7c73f2ebb8ea29b59522f23bc28286beedc0a6f7bfd7290e2fd7262d117e510e11eda4dfbfddbebb49be95f6c4bdbe536c985760ecb4fd5bfb11441b8958cda6d91da4352bb6f6cbcf179057db3a1d0ac7667fc3cd670a7cb43aa8fa5dc1e56b5b4af33f8f10fb20db7d27970d4a57d1a3e7c13fd25581d919f952c5e7caf5e4365136a414eb4467d44330ffd7ad6da9899b74186bc4856bb479a48273aca6a6e5bfe0df41cb937b8ce22f764884f209327eb34debde28078855bdbfb3a5d84c2e5a5e0e3a2642722af92776d7cb2c1e78164dceb83284a9583119542dc4152da5f88375450ecf5babc9fb3b3c5fce344e3ea44fdf5502471e2c43b0bd02ea5d4de333821035815219e903bfce77dd35e966d4552c2e2d0521904c669cba74a202eafc5be1aa19c8b2287723c17f454a6a00bf5063c291566624f444cd47cde69f4c1e3e5356fa075dde495fe19d8fb06b3084e6d3022032b99e45f646f3e8888fe508d1fbaf57a3cb77efec4031c327bcb0e041c865a471a1c448acf5201cd1148922f8dd157c72966e9e1ec101a3a1cd1b85ade3f01a970b134b6e13578cc7cda102835d143fab8736f21095033a259de1348d6821dec5438781ccd29f1f77a6ab3fbb056380009641de7df44e1f6f14ae69c40933f55319cc3d8f7d55c32b4476ab4308e203c6051ec624b53e8099178360eb191eaabe297cb01ddfe879566d0b5da13de20a0ffe6bdc4e95487985f7065ef081cf5a8371170642e6a878d3f98d110af97a1a4e565fd5f11333e667e0cf5aa52ac5b4c4d2eb5d7ab436c5055aff704762111a56593e4cc8fac85d0ba965e16a27df56dc50685790b9e75169a841224dc24b1a7c26efba5fdb8baf6cd7a865d2652f569ae4cb8f2fd10841b1cd23b82d65443b7bb92b7ce73ffaa6c90f2d848f2f3f5f090b90ed6f2870c86beb7f5d90a47b7005ef</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
             </div>
             <hr>
             <div>
@@ -310,17 +307,12 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Ubuntu%E4%BD%BF%E7%94%A8/">Ubuntu使用</a>
+                      <a class="hover-with-bg" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%94%9F%E6%B4%BB/2022%E5%B9%B4/">2022年</a>
                     
                   </div>
                 
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Ubuntu/">Ubuntu</a>
-                    
-                  </div>
                 
               </div>
               
@@ -335,9 +327,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E5%88%A9%E7%94%A8gnome%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2/">
+                      <a href="/2022/02/22/linux%E7%BC%96%E7%A8%8B/linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B2-IO%E6%93%8D%E4%BD%9C/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ubuntu利用gnome美化界面</span>
+                        <span class="hidden-mobile">Linux系统编程2-IO操作</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -345,8 +337,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/02/03/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E5%8A%A0%E8%BD%BD%E4%B8%8D%E4%BA%86/">
-                        <span class="hidden-mobile">软件中心加载不了软件</span>
+                      <a href="/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E9%80%9F%E5%BA%A6/">
+                        <span class="hidden-mobile">ubuntu修改鼠标滚轮速度</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

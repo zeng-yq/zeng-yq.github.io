@@ -20,21 +20,21 @@
   
     <meta name="description" content="内容收集自网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim相关配置操作">
-<meta property="og:url" content="http://zengyq.cn/2022/02/05/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/vim%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="ubuntu修改鼠标滚轮速度">
+<meta property="og:url" content="http://zengyq.cn/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E4%BF%AE%E6%94%B9%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E9%80%9F%E5%BA%A6/index.html">
 <meta property="og:site_name" content="如此肤浅">
 <meta property="og:description" content="内容收集自网络">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
-<meta property="article:published_time" content="2022-02-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-12T13:19:39.529Z">
+<meta property="article:published_time" content="2022-02-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-26T07:10:47.296Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
   
   
-  <title>vim相关配置操作 - 如此肤浅</title>
+  <title>ubuntu修改鼠标滚轮速度 - 如此肤浅</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,7 +226,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="vim相关配置操作">
+            <span class="h2" id="subtitle" title="ubuntu修改鼠标滚轮速度">
               
             </span>
 
@@ -236,8 +236,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-05 00:00" pubdate>
-        2022年2月5日 凌晨
+      <time datetime="2022-02-07 00:00" pubdate>
+        2022年2月7日 凌晨
       </time>
     </span>
   
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      395 字
+      567 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      5 分钟
     </span>
   
 
@@ -285,22 +285,35 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">vim相关配置操作</h1>
+            <h1 style="display: none">ubuntu修改鼠标滚轮速度</h1>
             
             <div class="markdown-body">
-              <h1 id="vim下按上下左右建时输入abcd">vim下按上下左右建时输入ABCD</h1>
-<p><code>ubuntu</code> 系统自带的 vi 不完整导致，解决方法：安装完整的vi：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install vim-gtk<br></code></pre></div></td></tr></table></figure>
-<h1 id="man手册">man手册</h1>
-<p><code>ubuntu</code> 默认是没有完全安装 man 手册的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install manpages-de  manpages-de-dev manpages-dev glibc-doc manpages-posix-dev manpages-posix<br></code></pre></div></td></tr></table></figure>
-<p>如果为了显示中文手册，下载manpages-zh包，可以直接运行如下命令安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install  manpages-zh<br><span class="hljs-comment"># 卸载</span><br>sudo apt-get --purge remove manpages-zh<br></code></pre></div></td></tr></table></figure>
-<h1 id="vim下tab键空格数默认为8">vim下tab键空格数默认为8</h1>
-<p>修改配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo vim /etc/vim/vimrc<br></code></pre></div></td></tr></table></figure>
-<p>添加如下3行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> ts=4<br><span class="hljs-built_in">set</span> expandtab<br><span class="hljs-built_in">set</span> autoindent<br></code></pre></div></td></tr></table></figure>
+              <h1 id="鼠标滚轮速度">鼠标滚轮速度</h1>
+<p><code>ubuntu</code> 自带的设置里只有调鼠标速度的功能，没有调鼠标滚轮速度的功能，需要安装 <code>imwheel</code> 软件来实现。</p>
+<ul>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt install imwheel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>查看安装位置</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">whereis imwheel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo gedit ~/.imwheelrc<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-string">&quot;.*&quot;</span><br>None,      Up,   Button4, 3<br>None,      Down, Button5, 3<br>Control_L, Up,   Control_L|Button4<br>Control_L, Down, Control_L|Button5<br>Shift_L,   Up,   Shift_L|Button4<br>Shift_L,   Down, Shift_L|Button5<br></code></pre></div></td></tr></table></figure>
+<p>第一行的 <code>.*</code> 代表对所有应用生效；</p>
+<p>第二行和第三行的 3 代表一次滚动的行数；</p>
+<p>第四行和第五行可以让鼠标支持 <code>Ctrl+上下</code> 滚动，对应功能应用支持才可以；</p>
+<p>第六行和第七行可以让鼠标支持 <code>Shift+上下</code> 滚动，对应功能应用支持才可以。</p></li>
+<li><p>查看进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">ps -ef | grep imwheel<br></code></pre></div></td></tr></table></figure>
+<p>启动之前确保所有 <code>imwheel</code> 是结束的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo killall imwheel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">imwheel<br></code></pre></div></td></tr></table></figure></li>
+<li><p>开机启动</p>
+<p>利用 <code>gnome-session-properties</code> 命令添加自启命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">gnome-session-properties<br></code></pre></div></td></tr></table></figure>
+<p>在弹出的 gui 页面中添加自定义命令即可，如图：</p>
+<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20220207083435405.png" srcset="/img/loading.gif" lazyload /></p></li>
+</ul>
 
             </div>
             <hr>
@@ -335,9 +348,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E5%88%A9%E7%94%A8gnome%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2/">
+                      <a href="/2022/02/10/%E7%94%9F%E6%B4%BB/2022-02-10_%E5%AE%B6%E5%BA%AD%E7%90%90%E4%BA%8B/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ubuntu利用gnome美化界面</span>
+                        <span class="hidden-mobile">2022-02-10 家庭琐事</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -345,8 +358,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/02/03/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/%E8%BD%AF%E4%BB%B6%E4%B8%AD%E5%BF%83%E5%8A%A0%E8%BD%BD%E4%B8%8D%E4%BA%86/">
-                        <span class="hidden-mobile">软件中心加载不了软件</span>
+                      <a href="/2022/02/07/Ubuntu%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/ubuntu%E5%88%A9%E7%94%A8gnome%E7%BE%8E%E5%8C%96%E7%95%8C%E9%9D%A2/">
+                        <span class="hidden-mobile">ubuntu利用gnome美化界面</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
