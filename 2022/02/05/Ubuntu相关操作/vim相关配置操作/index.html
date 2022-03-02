@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/20220202213924.png">
 <meta property="article:published_time" content="2022-02-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-12T13:19:39.529Z">
+<meta property="article:modified_time" content="2022-02-28T06:39:58.236Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary_large_image">
@@ -247,7 +247,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      395 字
+      615 字
     </span>
   
 
@@ -256,7 +256,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4 分钟
+      6 分钟
     </span>
   
 
@@ -296,6 +296,15 @@
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install manpages-de  manpages-de-dev manpages-dev glibc-doc manpages-posix-dev manpages-posix<br></code></pre></div></td></tr></table></figure>
 <p>如果为了显示中文手册，下载manpages-zh包，可以直接运行如下命令安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo apt-get install  manpages-zh<br><span class="hljs-comment"># 卸载</span><br>sudo apt-get --purge remove manpages-zh<br></code></pre></div></td></tr></table></figure>
+<ul>
+<li><p>而中文手册可能翻译不准确，此时若想看看英文版本的 man 手册有如下集中方法</p>
+<ul>
+<li><p>使用 <code>man -L en</code> 可以用英文方式打开 man 手册</p>
+<p>如：<code>man -L en fopen</code></p></li>
+<li><p>若觉得上面这个方法比较麻烦，可以为 <code>man -L en</code> 创建一个别名</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 修改配置文件</span><br>sudo vi /etc/bash.bashrc<br><span class="hljs-comment"># 在最后加入如下内容</span><br><span class="hljs-built_in">alias</span> mane=<span class="hljs-string">&#x27;man -L en&#x27;</span><br><span class="hljs-comment"># 运行下面命令，重新启用.bashrc文件</span><br><span class="hljs-built_in">source</span> /etc/bash.bashrc<br></code></pre></div></td></tr></table></figure></li>
+</ul></li>
+</ul>
 <h1 id="vim下tab键空格数默认为8">vim下tab键空格数默认为8</h1>
 <p>修改配置文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo vim /etc/vim/vimrc<br></code></pre></div></td></tr></table></figure>
