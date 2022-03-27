@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" data-default-color-scheme=dark>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/boji.png">
-  <link rel="icon" href="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/boji.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="hhttps://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/boji.png">
+  <link rel="icon" href="hhttps://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/boji.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -25,14 +25,14 @@
 <meta property="og:site_name" content="如此肤浅">
 <meta property="og:description" content="相关知识  网页渲染过程  ​ 对于异步加载数据的网页（先加载网页框架，数据后续发送请求）   HTTP协议   请求 123请求行 -&gt; 请求方式(get&#x2F;post)、请求url地址、协议请求头 -&gt; 放一些服务器要使用的附加信息(如：请求从哪里来、对返回的数据有什么要求)请求体 -&gt; 放请求的参数">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/pachong.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/pachong.png">
 <meta property="article:published_time" content="2021-10-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-01-11T11:55:02.995Z">
+<meta property="article:modified_time" content="2022-03-27T08:47:44.483Z">
 <meta property="article:author" content="zeng-yq">
 <meta property="article:tag" content="爬虫">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/pachong.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/pachong.png">
   
   
   <title>爬虫 - 如此肤浅</title>
@@ -222,7 +222,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('https://gitee.com/zengyuqin/drawing-bed/raw/master/img/blog_bg2.png') no-repeat center center;
+         style="background: url('hhttps://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/blog_bg2.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -294,7 +294,7 @@
 <p>网页渲染过程</p>
 </blockquote>
 <p>​ 对于异步加载数据的网页（先加载网页框架，数据后续发送请求）</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014202449192.png" srcset="/img/loading.gif" lazyload alt="image-20211014202449192" style="zoom: 80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014202449192.png" srcset="/img/loading.gif" lazyload alt="image-20211014202449192" style="zoom: 80%;" /></p>
 <blockquote>
 <p>HTTP协议</p>
 </blockquote>
@@ -306,14 +306,14 @@
 <ul>
 <li><p>响应</p>
 <figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python">状态行 -&gt; 协议、状态码(<span class="hljs-number">404</span>、<span class="hljs-number">200</span>、<span class="hljs-number">500</span>等)<br>响应头 -&gt; 放一些客户端要使用的附加信息(如：密钥、cookie)<br>响应体 -&gt; 服务器返回给客户端要使用的内容(HTML、json等)<br></code></pre></div></td></tr></table></figure>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014203754875.png" srcset="/img/loading.gif" lazyload alt="image-20211014203754875" style="zoom: 80%;" /></p></li>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014203754875.png" srcset="/img/loading.gif" lazyload alt="image-20211014203754875" style="zoom: 80%;" /></p></li>
 <li><p>请求头中常见的一些重要的内容（爬虫需要）：</p>
 <ol type="1">
 <li>User-Agent：请求载体的身份标识（用什么发送的请求）</li>
 <li>Referer：防盗链（这次请求时从哪个页面来的？反爬虫会用到）</li>
 <li>cookie：本地字符串数据信息（用户登录信息，反爬的token）</li>
 </ol>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014204432009.png" srcset="/img/loading.gif" lazyload alt="image-20211014204432009" style="zoom: 80%;" /></p></li>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014204432009.png" srcset="/img/loading.gif" lazyload alt="image-20211014204432009" style="zoom: 80%;" /></p></li>
 <li><p>请求方式:</p>
 <ul>
 <li>GET：查询的时候</li>
@@ -331,7 +331,7 @@
 <p>​ ==程序被拦截、GET==</p>
 <figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br>url = <span class="hljs-string">&quot;https://www.sogou.com/web?query=周杰伦&quot;</span><br><span class="hljs-comment"># 地址栏传参数均为GET请求</span><br>resp = requests.get(url)<br><span class="hljs-built_in">print</span>(resp.text)    <span class="hljs-comment"># 拿到页面源代码</span><br>resp.close()<br></code></pre></div></td></tr></table></figure>
 <p>​ 此时输出：</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014205909602.png" srcset="/img/loading.gif" lazyload alt="image-20211014205909602" style="zoom:80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014205909602.png" srcset="/img/loading.gif" lazyload alt="image-20211014205909602" style="zoom:80%;" /></p>
 <p>​ 因此，需要伪装成浏览器访问，伪装user-agent</p>
 <figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br>query = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;输入一个你喜欢的明星：&quot;</span>)<br>url = <span class="hljs-string">f&quot;https://www.sogou.com/web?query=<span class="hljs-subst">&#123;query&#125;</span>&quot;</span><br>dic = &#123;<br>    <span class="hljs-string">&quot;user-agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 *****(这部分去浏览器里面复制过来)&quot;</span><br>&#125;<br>resp = requests.get(url, headers=dic)<br><span class="hljs-built_in">print</span>(resp.text)    <span class="hljs-comment"># 拿到页面源代码</span><br>resp.close()<br></code></pre></div></td></tr></table></figure>
 <blockquote>
@@ -339,20 +339,20 @@
 </blockquote>
 <p>==POST==</p>
 <p>​ post请求传参数需要通过表单数据</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014211212979.png" srcset="/img/loading.gif" lazyload alt="image-20211014211212979" style="zoom: 80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014211212979.png" srcset="/img/loading.gif" lazyload alt="image-20211014211212979" style="zoom: 80%;" /></p>
 <figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br>url = <span class="hljs-string">&quot;https://fanyi.baidu.com/sug&quot;</span><br>s = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入你要翻译的英文单词：&quot;</span>)<br>dat = &#123;<br>    <span class="hljs-string">&quot;kw&quot;</span>: s<br>&#125;<br><span class="hljs-comment"># 发送post请求，发送的数据必须放在字典中，通过data参数进行传递</span><br>resp = requests.post(url, data=dat)<br><span class="hljs-built_in">print</span>(resp.json())  <span class="hljs-comment"># 将服务器返回的内容直接处理成json()</span><br>resp.close()<br></code></pre></div></td></tr></table></figure>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014220343589.png" srcset="/img/loading.gif" lazyload alt="image-20211014220343589" style="zoom: 80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014220343589.png" srcset="/img/loading.gif" lazyload alt="image-20211014220343589" style="zoom: 80%;" /></p>
 <blockquote>
 <p>案例三：</p>
 </blockquote>
 <p>​ ==GET请求地址很长，需重新封装参数==</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014220847958.png" srcset="/img/loading.gif" lazyload alt="image-20211014220847958" style="zoom: 80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014220847958.png" srcset="/img/loading.gif" lazyload alt="image-20211014220847958" style="zoom: 80%;" /></p>
 <p>​ 发现没任何结果，而参数等都没问题，则被反爬了。通过打印user-agent发现不是模拟的浏览器。</p>
 <figure>
-<img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014221432711.png" srcset="/img/loading.gif" lazyload alt="image-20211014221432711" /><figcaption aria-hidden="true">image-20211014221432711</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014221432711.png" srcset="/img/loading.gif" lazyload alt="image-20211014221432711" /><figcaption aria-hidden="true">image-20211014221432711</figcaption>
 </figure>
 <figure>
-<img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211014221650940.png" srcset="/img/loading.gif" lazyload alt="image-20211014221650940" /><figcaption aria-hidden="true">image-20211014221650940</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211014221650940.png" srcset="/img/loading.gif" lazyload alt="image-20211014221650940" /><figcaption aria-hidden="true">image-20211014221650940</figcaption>
 </figure>
 <figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br>url =<span class="hljs-string">&quot;https://movie.douban.com/j/chart/top_list&quot;</span><br><span class="hljs-comment"># 重新封装参数</span><br>param = &#123;<br>    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;24&quot;</span>,<br>    <span class="hljs-string">&quot;interval_id&quot;</span>: <span class="hljs-string">&quot;100:90&quot;</span>,<br>    <span class="hljs-string">&quot;action&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,<br>    <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-string">&quot;limit&quot;</span>: <span class="hljs-number">20</span><br>&#125;<br><span class="hljs-comment"># 修改user-agent</span><br>headers = &#123;<br>    <span class="hljs-string">&#x27;User-Agent&#x27;</span>: <span class="hljs-string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36 Edg/94.0.992.47&#x27;</span>, <span class="hljs-string">&#x27;Accept-Encoding&#x27;</span>: <span class="hljs-string">&#x27;gzip, deflate&#x27;</span>, <span class="hljs-string">&#x27;Accept&#x27;</span>: <span class="hljs-string">&#x27;*/*&#x27;</span>, <span class="hljs-string">&#x27;Connection&#x27;</span>: <span class="hljs-string">&#x27;keep-alive&#x27;</span><br>&#125;<br>resp = requests.get(url=url, params=param, headers=headers)<br><span class="hljs-built_in">print</span>(resp.json())<br>resp.close()<br></code></pre></div></td></tr></table></figure>
 <h1 id="数据解析">数据解析</h1>
@@ -382,28 +382,28 @@
 <figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python">s = <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">&lt;div class=&#x27;xiyouji&#x27;&gt;&lt;span id=&#x27;1&#x27;&gt;孙悟空&lt;/span&gt;&lt;/div&gt;</span><br><span class="hljs-string">&lt;div class=&#x27;shuihuzhuan&#x27;&gt;&lt;span id=&#x27;2&#x27;&gt;武松&lt;/span&gt;&lt;/div&gt;</span><br><span class="hljs-string">&lt;div class=&#x27;sanguoyanyi&#x27;&gt;&lt;span id=&#x27;3&#x27;&gt;诸葛亮&lt;/span&gt;&lt;/div&gt;</span><br><span class="hljs-string">&lt;div class=&#x27;hongloumeng&#x27;&gt;&lt;span id=&#x27;4&#x27;&gt;贾宝玉&lt;/span&gt;&lt;/div&gt;</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-comment"># re.S 能让.匹配换行符</span><br><span class="hljs-comment"># (?P&lt;分组名称&gt;正则表达式) 可单独从正则匹配的内容中进一步提取内容</span><br><span class="hljs-comment"># (?P&lt;name&gt;.*?)将.*?匹配到的内容放到一个名称为name的组中，可通过组名name取到其中的值</span><br>obj = re.<span class="hljs-built_in">compile</span>(<span class="hljs-string">r&quot;&lt;div class=&#x27;.*?&#x27;&gt;&lt;span id=&#x27;(?P&lt;id&gt;\d+)&#x27;&gt;(?P&lt;name&gt;.*?)&lt;/span&gt;&lt;/div&gt;&quot;</span>, re.S)<br>result = obj.finditer(s)<br><span class="hljs-keyword">for</span> it <span class="hljs-keyword">in</span> result:<br>    <span class="hljs-built_in">print</span>(it.group())<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;第&quot;</span> + it.group(<span class="hljs-string">&quot;id&quot;</span>) + <span class="hljs-string">&quot;行的内容是：&quot;</span> + it.group(<span class="hljs-string">&quot;name&quot;</span>))<br>    <br>    <br><span class="hljs-comment"># 输出结果</span><br>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=&#x27;<span class="hljs-title">xiyouji</span>&#x27;&gt;&lt;<span class="hljs-title">span</span> <span class="hljs-title">id</span>=&#x27;1&#x27;&gt;孙悟空&lt;/<span class="hljs-title">span</span>&gt;&lt;/<span class="hljs-title">div</span>&gt;</span><br><span class="hljs-class">第1行的内容是：孙悟空</span><br><span class="hljs-class">&lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>=&#x27;<span class="hljs-title">shuihuzhuan</span>&#x27;&gt;&lt;<span class="hljs-title">span</span> <span class="hljs-title">id</span>=&#x27;2&#x27;&gt;武松&lt;/<span class="hljs-title">span</span>&gt;&lt;/<span class="hljs-title">div</span>&gt;</span><br><span class="hljs-class">第2行的内容是：武松</span><br><span class="hljs-class">&lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>=&#x27;<span class="hljs-title">sanguoyanyi</span>&#x27;&gt;&lt;<span class="hljs-title">span</span> <span class="hljs-title">id</span>=&#x27;3&#x27;&gt;诸葛亮&lt;/<span class="hljs-title">span</span>&gt;&lt;/<span class="hljs-title">div</span>&gt;</span><br><span class="hljs-class">第3行的内容是：诸葛亮</span><br><span class="hljs-class">&lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>=&#x27;<span class="hljs-title">hongloumeng</span>&#x27;&gt;&lt;<span class="hljs-title">span</span> <span class="hljs-title">id</span>=&#x27;4&#x27;&gt;贾宝玉&lt;/<span class="hljs-title">span</span>&gt;&lt;/<span class="hljs-title">div</span>&gt;</span><br><span class="hljs-class">第4行的内容是：贾宝玉</span><br></code></pre></div></td></tr></table></figure></li>
 </ul>
 <h3 id="案例豆瓣排行榜">案例:豆瓣排行榜</h3>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211016141911900.png" srcset="/img/loading.gif" lazyload alt="image-20211016141911900" style="zoom:50%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211016141911900.png" srcset="/img/loading.gif" lazyload alt="image-20211016141911900" style="zoom:50%;" /></p>
 <ul>
 <li><p>分析</p>
 <p>通过查找发现，排名信息以及在源码里面了，所以直接通过正则表达式从源代码里面抓取数据即可。</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211016142058441.png" srcset="/img/loading.gif" lazyload alt="image-20211016142058441" style="zoom: 80%;" /></p></li>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211016142058441.png" srcset="/img/loading.gif" lazyload alt="image-20211016142058441" style="zoom: 80%;" /></p></li>
 <li><p>操作</p>
 <figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">import</span> re<br><span class="hljs-keyword">import</span> csv<br><br>url = <span class="hljs-string">&quot;https://movie.douban.com/top250&quot;</span><br>resp = requests.get(url)<br>headers = &#123;<br>    <span class="hljs-string">&quot;user-agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36 Edg/94.0.992.50&quot;</span><br>&#125;<br>resp = requests.get(url, headers=headers)<br>page_content = resp.text<br><br><span class="hljs-comment"># 解析数据</span><br>obj = re.<span class="hljs-built_in">compile</span>(<br>    <span class="hljs-string">r&#x27;&lt;li&gt;.*?&lt;div class=&quot;item&quot;&gt;.*?&lt;span class=&quot;title&quot;&gt;(?P&lt;name&gt;.*?)&lt;/span&gt;.*?&#x27;</span><br>    <span class="hljs-string">r&#x27;&lt;p class=&quot;&quot;&gt;.*?&lt;br&gt;(?P&lt;year&gt;.*?)&amp;nbsp.*?&lt;/p&gt;.*?&lt;span class=&quot;rating_num&quot; &#x27;</span><br>    <span class="hljs-string">r&#x27;property=&quot;v:average&quot;&gt;(?P&lt;star&gt;.*?)&lt;/span&gt;.*?&lt;span&gt;(?P&lt;number&gt;.*?)人评价&#x27;</span>,<br>    re.S)<br><br><span class="hljs-comment"># 开始匹配</span><br>result = obj.finditer(page_content)<br>f = <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;data.csv&quot;</span>, mode=<span class="hljs-string">&quot;w&quot;</span>,encoding=<span class="hljs-string">&quot;utf-8&quot;</span>)<br>csvwriter = csv.writer(f)<br><span class="hljs-keyword">for</span> it <span class="hljs-keyword">in</span> result:<br>    <span class="hljs-comment"># 将数据放到字典中，再写入文件</span><br>    dic = it.groupdict()<br>    dic[<span class="hljs-string">&#x27;year&#x27;</span>] = dic[<span class="hljs-string">&#x27;year&#x27;</span>].strip()<br>    csvwriter.writerow(dic.values())<br>f.close()<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---------over-------&quot;</span>)<br></code></pre></div></td></tr></table></figure>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211016154436370.png" srcset="/img/loading.gif" lazyload alt="image-20211016154436370" style="zoom: 80%;" /></p></li>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211016154436370.png" srcset="/img/loading.gif" lazyload alt="image-20211016154436370" style="zoom: 80%;" /></p></li>
 <li><p>注意</p>
 <ol type="1">
 <li>如果出现下图所示问题，说明网站有一些加密措施，只需加个 <code>verify=False</code> 即可。</li>
 </ol>
 <figure>
-<img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211016155342044.png" srcset="/img/loading.gif" lazyload alt="image-20211016155342044" /><figcaption aria-hidden="true">image-20211016155342044</figcaption>
+<img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211016155342044.png" srcset="/img/loading.gif" lazyload alt="image-20211016155342044" /><figcaption aria-hidden="true">image-20211016155342044</figcaption>
 </figure>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211016155447642.png" srcset="/img/loading.gif" lazyload alt="image-20211016155447642" style="zoom:80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211016155447642.png" srcset="/img/loading.gif" lazyload alt="image-20211016155447642" style="zoom:80%;" /></p>
 <ol start="2" type="1">
 <li><p>如果出现乱码，可以看看 <code>meta</code> 标签中的编码格式。</p>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211016155634251.png" srcset="/img/loading.gif" lazyload alt="image-20211016155634251" style="zoom:80%;" /></p></li>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211016155634251.png" srcset="/img/loading.gif" lazyload alt="image-20211016155634251" style="zoom:80%;" /></p></li>
 </ol></li>
 </ul>
-<p><img src="https://gitee.com/zengyuqin/drawing-bed/raw/master/img/image-20211016155715906.png" srcset="/img/loading.gif" lazyload alt="image-20211016155715906" style="zoom:80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zeng-yq/drawingBed/img/image-20211016155715906.png" srcset="/img/loading.gif" lazyload alt="image-20211016155715906" style="zoom:80%;" /></p>
 <h2 id="bs4解析">Bs4解析</h2>
 <p><code>Beautiful Soup 4</code></p>
 <ul>
